@@ -60,11 +60,11 @@ WSGI_APPLICATION = 'muhcore.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'RV',
+        'NAME': 'muhcore',
         'HOST': 'localhost',
         'PORT': '3306',
-        'USER': 'david',
-        'PASSWORD': 'mysql'
+        'USER': 'admin',
+        'PASSWORD': 'admin'
     }
 }
 

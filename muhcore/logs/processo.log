@@ -1,0 +1,518 @@
+17/12/2014 17:52:52 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 17:52:52 Conectando a battlenet
+17/12/2014 17:52:52 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:52:54 Conectado!
+17/12/2014 17:52:54 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:52:55 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 17:52:55 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 17:52:55 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 17:54:31 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 17:54:31 Conectando a battlenet
+17/12/2014 17:54:31 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:54:33 Conectado!
+17/12/2014 17:54:33 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:54:35 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 17:54:35 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 17:54:35 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 17:55:00 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 17:55:00 Conectando a battlenet
+17/12/2014 17:55:00 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:01 Conectado!
+17/12/2014 17:55:01 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:03 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 17:55:03 (0.017) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 17:55:03 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 17:55:03 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/devah?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:05 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:06 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/labino?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:08 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/diivil?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:09 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/seijta?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:16 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 17:55:16 Conectando a battlenet
+17/12/2014 17:55:16 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:17 Conectado!
+17/12/2014 17:55:17 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:19 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 17:55:19 (0.001) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 17:55:19 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 17:55:19 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/devah?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:19 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:20 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/labino?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:21 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/diivil?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:21 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/seijta?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:51 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 17:55:51 Conectando a battlenet
+17/12/2014 17:55:51 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:53 Conectado!
+17/12/2014 17:55:53 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:55:55 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 17:55:55 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 17:55:55 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 17:57:46 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 17:57:46 Conectando a battlenet
+17/12/2014 17:57:46 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:57:48 Conectado!
+17/12/2014 17:57:48 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:57:50 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 17:57:50 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 17:57:50 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 17:58:02 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 17:58:02 Conectando a battlenet
+17/12/2014 17:58:02 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:58:03 Conectado!
+17/12/2014 17:58:03 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 17:58:05 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 17:58:05 (0.001) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 17:58:05 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:05:33 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:05:33 Conectando a battlenet
+17/12/2014 18:05:33 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:05:35 Conectado!
+17/12/2014 18:05:35 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:05:37 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:05:37 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 18:05:37 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:05:52 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:05:52 Conectando a battlenet
+17/12/2014 18:05:52 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:05:54 Conectado!
+17/12/2014 18:05:54 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:05:55 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:05:55 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 18:05:55 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:05:55 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Hardclass', `ilvl_equipado` = 100, `guilda_id` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon'; args=('Hardclass', 100, 'Paragon@Lightnings Blade', 'Hardclass@Paragon')
+17/12/2014 18:05:55 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 100, 'Paragon@Lightnings Blade', 'Hardclass@Paragon'); args=('Hardclass', 100, 'Paragon@Lightnings Blade', 'Hardclass@Paragon')
+17/12/2014 18:12:19 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:12:19 Conectando a battlenet
+17/12/2014 18:12:19 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:12:22 Conectado!
+17/12/2014 18:12:22 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:12:24 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:12:24 (0.001) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 18:12:24 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:12:51 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:12:51 Conectando a battlenet
+17/12/2014 18:12:51 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:12:52 Conectado!
+17/12/2014 18:12:52 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:12:54 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:12:54 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 18:12:54 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:13:07 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:13:07 Conectando a battlenet
+17/12/2014 18:13:07 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:13:08 Conectado!
+17/12/2014 18:13:08 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:13:10 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:13:10 (0.001) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 18:13:10 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:13:17 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:13:17 Conectando a battlenet
+17/12/2014 18:13:17 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:13:19 Conectado!
+17/12/2014 18:13:19 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:13:20 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:13:20 (0.001) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 18:13:20 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:15:48 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:15:48 Conectando a battlenet
+17/12/2014 18:15:48 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:15:51 Conectado!
+17/12/2014 18:15:51 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:15:53 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:15:53 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 18:15:53 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:16:01 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:16:01 Conectando a battlenet
+17/12/2014 18:16:01 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:16:02 Conectado!
+17/12/2014 18:16:02 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:16:04 (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:16:04 (0.001) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade' WHERE `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade'; args=('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade')
+17/12/2014 18:16:04 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:16:04 (0.001) UPDATE `muh_core_app_personagem` SET `nome` = 'Hardclass', `ilvl_equipado` = 100, `guilda_id` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon'; args=('Hardclass', 100, 'Paragon@Lightnings Blade', 'Hardclass@Paragon')
+17/12/2014 18:17:18 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:17:18 Conectando a battlenet
+17/12/2014 18:17:18 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:17:20 Conectado!
+17/12/2014 18:17:20 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:17:22 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:17:22 (0.001) INSERT INTO `muh_core_app_guilda` (`nome`, `reino`) VALUES ('Paragon', 'Lightnings Blade'); args=['Paragon', 'Lightnings Blade']
+17/12/2014 18:21:56 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:21:56 Conectando a battlenet
+17/12/2014 18:21:56 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:21:58 Conectado!
+17/12/2014 18:21:58 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:22:00 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:22:00 (0.001) INSERT INTO `muh_core_app_guilda` (`nome`, `reino`) VALUES ('Paragon', 'Lightnings Blade'); args=['Paragon', 'Lightnings Blade']
+17/12/2014 18:22:00 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:22:00 (0.001) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`) VALUES ('Hardclass', 100, 1); args=['Hardclass', 100, 1]
+17/12/2014 18:22:00 (0.001) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`) VALUES ('Seijta', 100, 1); args=['Seijta', 100, 1]
+17/12/2014 18:22:00 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`) VALUES ('Niranaz', 100, 1); args=['Niranaz', 100, 1]
+17/12/2014 18:22:00 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`) VALUES ('Hevoskuiskaa', 100, 1); args=['Hevoskuiskaa', 100, 1]
+17/12/2014 18:22:00 (0.001) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`) VALUES ('Arx', 100, 1); args=['Arx', 100, 1]
+17/12/2014 18:23:04 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:23:04 Conectando a battlenet
+17/12/2014 18:23:04 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:23:06 Conectado!
+17/12/2014 18:23:06 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:23:08 (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:23:08 (0.001) INSERT INTO `muh_core_app_guilda` (`nome`, `reino`) VALUES ('Paragon', 'Lightnings Blade'); args=['Paragon', 'Lightnings Blade']
+17/12/2014 18:23:08 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:23:08 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`) VALUES ('Hardclass', 100, 2); args=['Hardclass', 100, 2]
+17/12/2014 18:23:08 (0.001) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`) VALUES ('Seijta', 100, 2); args=['Seijta', 100, 2]
+17/12/2014 18:23:08 (0.001) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`) VALUES ('Niranaz', 100, 2); args=['Niranaz', 100, 2]
+17/12/2014 18:23:08 (0.001) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`) VALUES ('Hevoskuiskaa', 100, 2); args=['Hevoskuiskaa', 100, 2]
+17/12/2014 18:23:08 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`) VALUES ('Arx', 100, 2); args=['Arx', 100, 2]
+17/12/2014 18:25:10 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:25:10 Conectando a battlenet
+17/12/2014 18:25:10 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:25:12 Conectado!
+17/12/2014 18:25:12 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:25:14 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:25:14 (0.001) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon')
+17/12/2014 18:27:15 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:27:15 Conectando a battlenet
+17/12/2014 18:27:15 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:27:18 Conectado!
+17/12/2014 18:27:18 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:27:20 (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:27:20 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon')
+17/12/2014 18:28:31 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:28:31 Conectando a battlenet
+17/12/2014 18:28:31 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:28:33 Conectado!
+17/12/2014 18:28:33 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:28:35 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:28:35 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon')
+17/12/2014 18:29:55 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:29:55 Conectando a battlenet
+17/12/2014 18:29:55 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:29:57 Conectado!
+17/12/2014 18:29:57 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:29:59 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:29:59 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon')
+17/12/2014 18:42:08 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:42:08 Conectando a battlenet
+17/12/2014 18:42:08 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:42:10 Conectado!
+17/12/2014 18:42:10 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:42:11 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:42:11 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon')
+17/12/2014 18:42:11 (0.000) INSERT INTO `muh_core_app_guilda` (`nome`, `reino`, `identificador`) VALUES ('Paragon', 'Lightnings Blade', ''); args=['Paragon', 'Lightnings Blade', u'']
+17/12/2014 18:44:31 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:44:31 Conectando a battlenet
+17/12/2014 18:44:31 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:44:33 Conectado!
+17/12/2014 18:44:33 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:44:35 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:44:35 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon')
+17/12/2014 18:44:35 (0.001) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = '' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'', 1)
+17/12/2014 18:44:35 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:44:35 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=(100, 1, 'Hardclass')
+17/12/2014 18:44:35 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 100, 1, ''); args=['Hardclass', 100, 1, u'']
+17/12/2014 18:44:59 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:44:59 Conectando a battlenet
+17/12/2014 18:44:59 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:45:00 Conectado!
+17/12/2014 18:45:00 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:45:02 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:45:02 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon')
+17/12/2014 18:45:02 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = '' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'', 1)
+17/12/2014 18:45:02 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:45:02 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=(100, 1, 'Hardclass')
+17/12/2014 18:45:10 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:45:10 Conectando a battlenet
+17/12/2014 18:45:10 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:45:12 Conectado!
+17/12/2014 18:45:12 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:45:13 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:45:13 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon')
+17/12/2014 18:45:13 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = '' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'', 1)
+17/12/2014 18:45:13 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:45:13 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=(100, 1, 'Hardclass')
+17/12/2014 18:45:13 (0.001) UPDATE `muh_core_app_personagem` SET `nome` = 'Hardclass', `ilvl_equipado` = 100, `guilda_id` = 1, `identificador` = '' WHERE `muh_core_app_personagem`.`id` = 1; args=(u'Hardclass', 100, 1, u'', 1)
+17/12/2014 18:45:13 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=(100, 1, 'Seijta')
+17/12/2014 18:45:13 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Seijta', 100, 1, ''); args=['Seijta', 100, 1, u'']
+17/12/2014 18:45:13 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=(100, 1, 'Seijta')
+17/12/2014 18:46:03 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:46:03 Conectando a battlenet
+17/12/2014 18:46:03 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:46:06 Conectado!
+17/12/2014 18:46:06 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:46:07 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:46:07 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon')
+17/12/2014 18:46:07 (0.000) INSERT INTO `muh_core_app_guilda` (`nome`, `reino`, `identificador`) VALUES ('Paragon', 'Lightnings Blade', ''); args=['Paragon', 'Lightnings Blade', u'']
+17/12/2014 18:46:07 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:46:07 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=(100, 1, 'Hardclass')
+17/12/2014 18:46:07 (0.001) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 100, 1, ''); args=['Hardclass', 100, 1, u'']
+17/12/2014 18:46:07 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=(100, 1, 'Seijta')
+17/12/2014 18:46:07 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Seijta', 100, 1, ''); args=['Seijta', 100, 1, u'']
+17/12/2014 18:46:07 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=(100, 1, 'Seijta')
+17/12/2014 18:47:42 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:47:42 Conectando a battlenet
+17/12/2014 18:47:42 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:47:44 Conectado!
+17/12/2014 18:47:44 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:47:57 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:47:57 Conectando a battlenet
+17/12/2014 18:47:57 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:47:59 Conectado!
+17/12/2014 18:47:59 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:48:00 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:48:00 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 18:48:00 (0.000) INSERT INTO `muh_core_app_guilda` (`nome`, `reino`, `identificador`) VALUES ('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade'); args=['Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade']
+17/12/2014 18:48:00 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:48:00 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 2 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 100, 2, 'Hardclass')
+17/12/2014 18:48:00 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 100, 2, 'Hardclass@Paragon'); args=['Hardclass', 100, 2, 'Hardclass@Paragon']
+17/12/2014 18:48:00 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Seijta@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 2 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=('Seijta@Paragon', 100, 2, 'Seijta')
+17/12/2014 18:48:00 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Seijta', 100, 2, 'Seijta@Paragon'); args=['Seijta', 100, 2, 'Seijta@Paragon']
+17/12/2014 18:48:00 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Niranaz@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 2 AND `muh_core_app_personagem`.`nome` = 'Niranaz') LIMIT 21; args=('Niranaz@Paragon', 100, 2, 'Niranaz')
+17/12/2014 18:48:00 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Niranaz', 100, 2, 'Niranaz@Paragon'); args=['Niranaz', 100, 2, 'Niranaz@Paragon']
+17/12/2014 18:48:00 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hevoskuiskaa@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 2 AND `muh_core_app_personagem`.`nome` = 'Hevoskuiskaa') LIMIT 21; args=('Hevoskuiskaa@Paragon', 100, 2, 'Hevoskuiskaa')
+17/12/2014 18:48:00 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hevoskuiskaa', 100, 2, 'Hevoskuiskaa@Paragon'); args=['Hevoskuiskaa', 100, 2, 'Hevoskuiskaa@Paragon']
+17/12/2014 18:48:00 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Arx@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 2 AND `muh_core_app_personagem`.`nome` = 'Arx') LIMIT 21; args=('Arx@Paragon', 100, 2, 'Arx')
+17/12/2014 18:48:00 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Arx', 100, 2, 'Arx@Paragon'); args=['Arx', 100, 2, 'Arx@Paragon']
+17/12/2014 18:48:35 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:48:35 Conectando a battlenet
+17/12/2014 18:48:35 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:48:36 Conectado!
+17/12/2014 18:48:36 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:48:37 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:48:37 (0.001) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 18:48:37 (0.000) INSERT INTO `muh_core_app_guilda` (`nome`, `reino`, `identificador`) VALUES ('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade'); args=['Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade']
+17/12/2014 18:48:37 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:48:38 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 100, 1, 'Hardclass')
+17/12/2014 18:48:38 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 100, 1, 'Hardclass@Paragon'); args=['Hardclass', 100, 1, 'Hardclass@Paragon']
+17/12/2014 18:48:38 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Seijta@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=('Seijta@Paragon', 100, 1, 'Seijta')
+17/12/2014 18:48:38 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Seijta', 100, 1, 'Seijta@Paragon'); args=['Seijta', 100, 1, 'Seijta@Paragon']
+17/12/2014 18:48:38 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Niranaz@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Niranaz') LIMIT 21; args=('Niranaz@Paragon', 100, 1, 'Niranaz')
+17/12/2014 18:48:38 (0.001) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Niranaz', 100, 1, 'Niranaz@Paragon'); args=['Niranaz', 100, 1, 'Niranaz@Paragon']
+17/12/2014 18:48:38 (0.002) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hevoskuiskaa@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hevoskuiskaa') LIMIT 21; args=('Hevoskuiskaa@Paragon', 100, 1, 'Hevoskuiskaa')
+17/12/2014 18:48:38 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hevoskuiskaa', 100, 1, 'Hevoskuiskaa@Paragon'); args=['Hevoskuiskaa', 100, 1, 'Hevoskuiskaa@Paragon']
+17/12/2014 18:48:38 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Arx@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Arx') LIMIT 21; args=('Arx@Paragon', 100, 1, 'Arx')
+17/12/2014 18:48:38 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Arx', 100, 1, 'Arx@Paragon'); args=['Arx', 100, 1, 'Arx@Paragon']
+17/12/2014 18:49:02 Guilda: EvecraideR Gaming, Realm: Nemesis BG: us
+17/12/2014 18:49:02 Conectando a battlenet
+17/12/2014 18:49:02 Battle.net => https://us.api.battle.net/wow/guild/nemesis/evecraider%20gaming?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:49:06 Conectado!
+17/12/2014 18:49:06 Battle.net => https://us.api.battle.net/wow/realm/status?locale=en&realm=nemesis&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:49:06 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:49:06 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Nemesis' AND `muh_core_app_guilda`.`identificador` = 'EvecraideR Gaming@Nemesis' AND `muh_core_app_guilda`.`nome` = 'EvecraideR Gaming') LIMIT 21; args=('Nemesis', 'EvecraideR Gaming@Nemesis', 'EvecraideR Gaming')
+17/12/2014 18:49:06 (0.000) INSERT INTO `muh_core_app_guilda` (`nome`, `reino`, `identificador`) VALUES ('EvecraideR Gaming', 'Nemesis', 'EvecraideR Gaming@Nemesis'); args=['EvecraideR Gaming', 'Nemesis', 'EvecraideR Gaming@Nemesis']
+17/12/2014 18:49:06 Guilda: EvecraideR Gaming@Nemesis inserida no banco de dados
+17/12/2014 18:49:06 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Balan@EvecraideR Gaming' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 2 AND `muh_core_app_personagem`.`nome` = 'Balan') LIMIT 21; args=('Balan@EvecraideR Gaming', 100, 2, 'Balan')
+17/12/2014 18:49:06 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Balan', 100, 2, 'Balan@EvecraideR Gaming'); args=['Balan', 100, 2, 'Balan@EvecraideR Gaming']
+17/12/2014 18:49:06 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Brunonaruto@EvecraideR Gaming' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 2 AND `muh_core_app_personagem`.`nome` = 'Brunonaruto') LIMIT 21; args=('Brunonaruto@EvecraideR Gaming', 100, 2, 'Brunonaruto')
+17/12/2014 18:49:06 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Brunonaruto', 100, 2, 'Brunonaruto@EvecraideR Gaming'); args=['Brunonaruto', 100, 2, 'Brunonaruto@EvecraideR Gaming']
+17/12/2014 18:49:06 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Bèck@EvecraideR Gaming' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 2 AND `muh_core_app_personagem`.`nome` = 'Bèck') LIMIT 21; args=('B\xc3\xa8ck@EvecraideR Gaming', 100, 2, 'B\xc3\xa8ck')
+17/12/2014 18:49:06 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Bèck', 100, 2, 'Bèck@EvecraideR Gaming'); args=['B\xc3\xa8ck', 100, 2, 'B\xc3\xa8ck@EvecraideR Gaming']
+17/12/2014 18:49:06 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Avântasia@EvecraideR Gaming' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 2 AND `muh_core_app_personagem`.`nome` = 'Avântasia') LIMIT 21; args=('Av\xc3\xa2ntasia@EvecraideR Gaming', 100, 2, 'Av\xc3\xa2ntasia')
+17/12/2014 18:49:06 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Avântasia', 100, 2, 'Avântasia@EvecraideR Gaming'); args=['Av\xc3\xa2ntasia', 100, 2, 'Av\xc3\xa2ntasia@EvecraideR Gaming']
+17/12/2014 18:49:06 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Iverniun@EvecraideR Gaming' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 2 AND `muh_core_app_personagem`.`nome` = 'Iverniun') LIMIT 21; args=('Iverniun@EvecraideR Gaming', 100, 2, 'Iverniun')
+17/12/2014 18:49:06 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Iverniun', 100, 2, 'Iverniun@EvecraideR Gaming'); args=['Iverniun', 100, 2, 'Iverniun@EvecraideR Gaming']
+17/12/2014 18:49:49 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:49:49 Conectando a battlenet
+17/12/2014 18:49:49 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:49:51 Conectado!
+17/12/2014 18:49:51 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:49:53 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:49:53 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 18:49:53 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'Paragon@Lightnings Blade', 1)
+17/12/2014 18:49:53 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:49:53 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 100, 1, 'Hardclass')
+17/12/2014 18:49:53 (0.001) UPDATE `muh_core_app_personagem` SET `nome` = 'Hardclass', `ilvl_equipado` = 100, `guilda_id` = 1, `identificador` = 'Hardclass@Paragon' WHERE `muh_core_app_personagem`.`id` = 1; args=(u'Hardclass', 100, 1, u'Hardclass@Paragon', 1)
+17/12/2014 18:49:53 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Seijta@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=('Seijta@Paragon', 100, 1, 'Seijta')
+17/12/2014 18:49:53 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Seijta', `ilvl_equipado` = 100, `guilda_id` = 1, `identificador` = 'Seijta@Paragon' WHERE `muh_core_app_personagem`.`id` = 2; args=(u'Seijta', 100, 1, u'Seijta@Paragon', 2)
+17/12/2014 18:49:53 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Niranaz@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Niranaz') LIMIT 21; args=('Niranaz@Paragon', 100, 1, 'Niranaz')
+17/12/2014 18:49:53 (0.001) UPDATE `muh_core_app_personagem` SET `nome` = 'Niranaz', `ilvl_equipado` = 100, `guilda_id` = 1, `identificador` = 'Niranaz@Paragon' WHERE `muh_core_app_personagem`.`id` = 3; args=(u'Niranaz', 100, 1, u'Niranaz@Paragon', 3)
+17/12/2014 18:49:53 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hevoskuiskaa@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hevoskuiskaa') LIMIT 21; args=('Hevoskuiskaa@Paragon', 100, 1, 'Hevoskuiskaa')
+17/12/2014 18:49:53 (0.001) UPDATE `muh_core_app_personagem` SET `nome` = 'Hevoskuiskaa', `ilvl_equipado` = 100, `guilda_id` = 1, `identificador` = 'Hevoskuiskaa@Paragon' WHERE `muh_core_app_personagem`.`id` = 4; args=(u'Hevoskuiskaa', 100, 1, u'Hevoskuiskaa@Paragon', 4)
+17/12/2014 18:49:53 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Arx@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Arx') LIMIT 21; args=('Arx@Paragon', 100, 1, 'Arx')
+17/12/2014 18:49:53 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Arx', `ilvl_equipado` = 100, `guilda_id` = 1, `identificador` = 'Arx@Paragon' WHERE `muh_core_app_personagem`.`id` = 5; args=(u'Arx', 100, 1, u'Arx@Paragon', 5)
+17/12/2014 18:52:45 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:52:45 Conectando a battlenet
+17/12/2014 18:52:45 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:52:47 Conectado!
+17/12/2014 18:52:47 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:52:49 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:52:49 (0.001) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 18:52:49 (0.000) INSERT INTO `muh_core_app_guilda` (`nome`, `reino`, `identificador`) VALUES ('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade'); args=['Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade']
+17/12/2014 18:52:49 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:52:49 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:52:50 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 100, 1, 'Hardclass')
+17/12/2014 18:52:50 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 100, 1, 'Hardclass@Paragon'); args=['Hardclass', 100, 1, 'Hardclass@Paragon']
+17/12/2014 18:52:50 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/seijta?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:52:51 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Seijta@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=('Seijta@Paragon', 100, 1, 'Seijta')
+17/12/2014 18:52:51 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Seijta', 100, 1, 'Seijta@Paragon'); args=['Seijta', 100, 1, 'Seijta@Paragon']
+17/12/2014 18:52:51 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/niranaz?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:52:53 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Niranaz@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Niranaz') LIMIT 21; args=('Niranaz@Paragon', 100, 1, 'Niranaz')
+17/12/2014 18:52:53 (0.001) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Niranaz', 100, 1, 'Niranaz@Paragon'); args=['Niranaz', 100, 1, 'Niranaz@Paragon']
+17/12/2014 18:52:53 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hevoskuiskaa?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:52:54 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hevoskuiskaa@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hevoskuiskaa') LIMIT 21; args=('Hevoskuiskaa@Paragon', 100, 1, 'Hevoskuiskaa')
+17/12/2014 18:52:54 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hevoskuiskaa', 100, 1, 'Hevoskuiskaa@Paragon'); args=['Hevoskuiskaa', 100, 1, 'Hevoskuiskaa@Paragon']
+17/12/2014 18:52:54 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/arx?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:52:55 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Arx@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Arx') LIMIT 21; args=('Arx@Paragon', 100, 1, 'Arx')
+17/12/2014 18:52:55 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Arx', 100, 1, 'Arx@Paragon'); args=['Arx', 100, 1, 'Arx@Paragon']
+17/12/2014 18:53:19 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:53:19 Conectando a battlenet
+17/12/2014 18:53:19 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:53:21 Conectado!
+17/12/2014 18:53:21 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:53:22 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:53:22 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 18:53:22 (0.001) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'Paragon@Lightnings Blade', 1)
+17/12/2014 18:53:22 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:53:22 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:53:22 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 100, 1, 'Hardclass')
+17/12/2014 18:53:22 (0.001) UPDATE `muh_core_app_personagem` SET `nome` = 'Hardclass', `ilvl_equipado` = 100, `guilda_id` = 1, `identificador` = 'Hardclass@Paragon' WHERE `muh_core_app_personagem`.`id` = 1; args=(u'Hardclass', 100, 1, u'Hardclass@Paragon', 1)
+17/12/2014 18:53:22 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/seijta?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:53:23 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Seijta@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=('Seijta@Paragon', 100, 1, 'Seijta')
+17/12/2014 18:53:23 (0.001) UPDATE `muh_core_app_personagem` SET `nome` = 'Seijta', `ilvl_equipado` = 100, `guilda_id` = 1, `identificador` = 'Seijta@Paragon' WHERE `muh_core_app_personagem`.`id` = 2; args=(u'Seijta', 100, 1, u'Seijta@Paragon', 2)
+17/12/2014 18:53:23 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/niranaz?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:53:24 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Niranaz@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Niranaz') LIMIT 21; args=('Niranaz@Paragon', 100, 1, 'Niranaz')
+17/12/2014 18:53:24 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Niranaz', `ilvl_equipado` = 100, `guilda_id` = 1, `identificador` = 'Niranaz@Paragon' WHERE `muh_core_app_personagem`.`id` = 3; args=(u'Niranaz', 100, 1, u'Niranaz@Paragon', 3)
+17/12/2014 18:53:24 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hevoskuiskaa?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:53:24 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hevoskuiskaa@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hevoskuiskaa') LIMIT 21; args=('Hevoskuiskaa@Paragon', 100, 1, 'Hevoskuiskaa')
+17/12/2014 18:53:24 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Hevoskuiskaa', `ilvl_equipado` = 100, `guilda_id` = 1, `identificador` = 'Hevoskuiskaa@Paragon' WHERE `muh_core_app_personagem`.`id` = 4; args=(u'Hevoskuiskaa', 100, 1, u'Hevoskuiskaa@Paragon', 4)
+17/12/2014 18:53:24 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/arx?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:53:25 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Arx@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 100 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Arx') LIMIT 21; args=('Arx@Paragon', 100, 1, 'Arx')
+17/12/2014 18:53:25 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Arx', `ilvl_equipado` = 100, `guilda_id` = 1, `identificador` = 'Arx@Paragon' WHERE `muh_core_app_personagem`.`id` = 5; args=(u'Arx', 100, 1, u'Arx@Paragon', 5)
+17/12/2014 18:54:53 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:54:53 Conectando a battlenet
+17/12/2014 18:54:53 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:54:55 Conectado!
+17/12/2014 18:54:55 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:54:57 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:54:57 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 18:54:57 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'Paragon@Lightnings Blade', 1)
+17/12/2014 18:54:57 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:54:57 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:54:58 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 18:54:58 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 648, 1, 'Hardclass@Paragon'); args=['Hardclass', 648, 1, 'Hardclass@Paragon']
+17/12/2014 18:54:58 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 18:57:06 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:57:06 Conectando a battlenet
+17/12/2014 18:57:06 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:57:08 Conectado!
+17/12/2014 18:57:08 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:57:10 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:57:10 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 18:57:10 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'Paragon@Lightnings Blade', 1)
+17/12/2014 18:57:10 (0.001) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'Paragon@Lightnings Blade', 1)
+17/12/2014 18:57:10 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:57:10 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:57:11 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 18:57:11 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 648, 1, 'Hardclass@Paragon'); args=['Hardclass', 648, 1, 'Hardclass@Paragon']
+17/12/2014 18:57:11 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 18:59:40 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 18:59:40 Conectando a battlenet
+17/12/2014 18:59:40 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:59:43 Conectado!
+17/12/2014 18:59:43 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:59:45 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 18:59:45 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 18:59:45 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'Paragon@Lightnings Blade', 1)
+17/12/2014 18:59:45 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 18:59:45 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 18:59:46 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 18:59:46 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 648, 1, 'Hardclass@Paragon'); args=['Hardclass', 648, 1, 'Hardclass@Paragon']
+17/12/2014 18:59:46 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 19:00:00 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 19:00:00 Conectando a battlenet
+17/12/2014 19:00:00 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:00:02 Conectado!
+17/12/2014 19:00:02 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:00:03 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 19:00:03 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 19:00:03 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'Paragon@Lightnings Blade', 1)
+17/12/2014 19:00:03 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 19:00:03 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:00:04 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 19:00:04 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 648, 1, 'Hardclass@Paragon'); args=['Hardclass', 648, 1, 'Hardclass@Paragon']
+17/12/2014 19:00:04 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 19:00:36 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 19:00:36 Conectando a battlenet
+17/12/2014 19:00:36 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:00:37 Conectado!
+17/12/2014 19:00:37 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:00:38 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 19:00:38 (0.001) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 19:00:38 (0.001) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'Paragon@Lightnings Blade', 1)
+17/12/2014 19:00:38 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 19:00:38 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:00:39 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 19:00:39 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 648, 1, 'Hardclass@Paragon'); args=['Hardclass', 648, 1, 'Hardclass@Paragon']
+17/12/2014 19:00:39 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 19:01:53 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 19:01:53 Conectando a battlenet
+17/12/2014 19:01:53 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:01:55 Conectado!
+17/12/2014 19:01:55 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:01:57 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 19:01:57 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 19:01:57 (0.001) INSERT INTO `muh_core_app_guilda` (`nome`, `reino`, `identificador`) VALUES ('Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade'); args=['Paragon', 'Lightnings Blade', 'Paragon@Lightnings Blade']
+17/12/2014 19:01:57 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 19:01:57 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:01:58 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 19:01:58 (0.001) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hardclass', 648, 1, 'Hardclass@Paragon'); args=['Hardclass', 648, 1, 'Hardclass@Paragon']
+17/12/2014 19:01:58 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/seijta?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:01:59 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Seijta@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 672 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=('Seijta@Paragon', 672, 1, 'Seijta')
+17/12/2014 19:01:59 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Seijta', 672, 1, 'Seijta@Paragon'); args=['Seijta', 672, 1, 'Seijta@Paragon']
+17/12/2014 19:01:59 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/niranaz?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:02:01 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Niranaz@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 646 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Niranaz') LIMIT 21; args=('Niranaz@Paragon', 646, 1, 'Niranaz')
+17/12/2014 19:02:01 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Niranaz', 646, 1, 'Niranaz@Paragon'); args=['Niranaz', 646, 1, 'Niranaz@Paragon']
+17/12/2014 19:02:01 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hevoskuiskaa?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:02:02 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hevoskuiskaa@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 639 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hevoskuiskaa') LIMIT 21; args=('Hevoskuiskaa@Paragon', 639, 1, 'Hevoskuiskaa')
+17/12/2014 19:02:02 (0.000) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Hevoskuiskaa', 639, 1, 'Hevoskuiskaa@Paragon'); args=['Hevoskuiskaa', 639, 1, 'Hevoskuiskaa@Paragon']
+17/12/2014 19:02:02 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/arx?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:02:03 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Arx@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 632 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Arx') LIMIT 21; args=('Arx@Paragon', 632, 1, 'Arx')
+17/12/2014 19:02:03 (0.001) INSERT INTO `muh_core_app_personagem` (`nome`, `ilvl_equipado`, `guilda_id`, `identificador`) VALUES ('Arx', 632, 1, 'Arx@Paragon'); args=['Arx', 632, 1, 'Arx@Paragon']
+17/12/2014 19:02:15 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 19:02:15 Conectando a battlenet
+17/12/2014 19:02:15 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:02:17 Conectado!
+17/12/2014 19:02:17 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:02:18 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 19:02:18 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 19:02:18 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'Paragon@Lightnings Blade', 1)
+17/12/2014 19:02:18 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 19:02:18 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:02:19 (0.000) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 19:02:19 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Hardclass', `ilvl_equipado` = 648, `guilda_id` = 1, `identificador` = 'Hardclass@Paragon' WHERE `muh_core_app_personagem`.`id` = 1; args=(u'Hardclass', 648, 1, u'Hardclass@Paragon', 1)
+17/12/2014 19:02:19 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/seijta?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:02:19 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Seijta@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 672 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=('Seijta@Paragon', 672, 1, 'Seijta')
+17/12/2014 19:02:19 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Seijta', `ilvl_equipado` = 672, `guilda_id` = 1, `identificador` = 'Seijta@Paragon' WHERE `muh_core_app_personagem`.`id` = 2; args=(u'Seijta', 672, 1, u'Seijta@Paragon', 2)
+17/12/2014 19:02:19 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/niranaz?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:02:20 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Niranaz@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 646 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Niranaz') LIMIT 21; args=('Niranaz@Paragon', 646, 1, 'Niranaz')
+17/12/2014 19:02:20 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Niranaz', `ilvl_equipado` = 646, `guilda_id` = 1, `identificador` = 'Niranaz@Paragon' WHERE `muh_core_app_personagem`.`id` = 3; args=(u'Niranaz', 646, 1, u'Niranaz@Paragon', 3)
+17/12/2014 19:02:20 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hevoskuiskaa?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:02:21 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hevoskuiskaa@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 639 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hevoskuiskaa') LIMIT 21; args=('Hevoskuiskaa@Paragon', 639, 1, 'Hevoskuiskaa')
+17/12/2014 19:02:21 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Hevoskuiskaa', `ilvl_equipado` = 639, `guilda_id` = 1, `identificador` = 'Hevoskuiskaa@Paragon' WHERE `muh_core_app_personagem`.`id` = 4; args=(u'Hevoskuiskaa', 639, 1, u'Hevoskuiskaa@Paragon', 4)
+17/12/2014 19:02:21 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/arx?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:02:21 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Arx@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 632 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Arx') LIMIT 21; args=('Arx@Paragon', 632, 1, 'Arx')
+17/12/2014 19:02:21 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Arx', `ilvl_equipado` = 632, `guilda_id` = 1, `identificador` = 'Arx@Paragon' WHERE `muh_core_app_personagem`.`id` = 5; args=(u'Arx', 632, 1, u'Arx@Paragon', 5)
+17/12/2014 19:03:01 Guilda: Paragon, Realm: Lightnings Blade BG: eu
+17/12/2014 19:03:01 Conectando a battlenet
+17/12/2014 19:03:01 Battle.net => https://eu.api.battle.net/wow/guild/lightnings-blade/paragon?locale=en&fields=members&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:03:03 Conectado!
+17/12/2014 19:03:03 Battle.net => https://eu.api.battle.net/wow/realm/status?locale=en&realm=lightnings%20blade&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:03:05 (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+17/12/2014 19:03:05 (0.000) SELECT `muh_core_app_guilda`.`id`, `muh_core_app_guilda`.`nome`, `muh_core_app_guilda`.`reino`, `muh_core_app_guilda`.`identificador` FROM `muh_core_app_guilda` WHERE (`muh_core_app_guilda`.`reino` = 'Lightnings Blade' AND `muh_core_app_guilda`.`identificador` = 'Paragon@Lightnings Blade' AND `muh_core_app_guilda`.`nome` = 'Paragon') LIMIT 21; args=('Lightnings Blade', 'Paragon@Lightnings Blade', 'Paragon')
+17/12/2014 19:03:05 (0.000) UPDATE `muh_core_app_guilda` SET `nome` = 'Paragon', `reino` = 'Lightnings Blade', `identificador` = 'Paragon@Lightnings Blade' WHERE `muh_core_app_guilda`.`id` = 1; args=(u'Paragon', u'Lightnings Blade', u'Paragon@Lightnings Blade', 1)
+17/12/2014 19:03:05 Guilda: Paragon@Lightnings Blade inserida no banco de dados
+17/12/2014 19:03:05 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hardclass?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:03:06 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hardclass@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 648 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hardclass') LIMIT 21; args=('Hardclass@Paragon', 648, 1, 'Hardclass')
+17/12/2014 19:03:06 (0.000) UPDATE `muh_core_app_personagem` SET `nome` = 'Hardclass', `ilvl_equipado` = 648, `guilda_id` = 1, `identificador` = 'Hardclass@Paragon' WHERE `muh_core_app_personagem`.`id` = 1; args=(u'Hardclass', 648, 1, 'Hardclass@Paragon', 1)
+17/12/2014 19:03:06 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/seijta?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:03:07 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Seijta@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 672 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Seijta') LIMIT 21; args=('Seijta@Paragon', 672, 1, 'Seijta')
+17/12/2014 19:03:07 (0.001) UPDATE `muh_core_app_personagem` SET `nome` = 'Seijta', `ilvl_equipado` = 672, `guilda_id` = 1, `identificador` = 'Seijta@Paragon' WHERE `muh_core_app_personagem`.`id` = 2; args=(u'Seijta', 672, 1, 'Seijta@Paragon', 2)
+17/12/2014 19:03:07 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/niranaz?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:03:08 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Niranaz@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 646 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Niranaz') LIMIT 21; args=('Niranaz@Paragon', 646, 1, 'Niranaz')
+17/12/2014 19:03:08 (0.001) UPDATE `muh_core_app_personagem` SET `nome` = 'Niranaz', `ilvl_equipado` = 646, `guilda_id` = 1, `identificador` = 'Niranaz@Paragon' WHERE `muh_core_app_personagem`.`id` = 3; args=(u'Niranaz', 646, 1, 'Niranaz@Paragon', 3)
+17/12/2014 19:03:08 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/hevoskuiskaa?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:03:09 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Hevoskuiskaa@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 639 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Hevoskuiskaa') LIMIT 21; args=('Hevoskuiskaa@Paragon', 639, 1, 'Hevoskuiskaa')
+17/12/2014 19:03:09 (0.001) UPDATE `muh_core_app_personagem` SET `nome` = 'Hevoskuiskaa', `ilvl_equipado` = 639, `guilda_id` = 1, `identificador` = 'Hevoskuiskaa@Paragon' WHERE `muh_core_app_personagem`.`id` = 4; args=(u'Hevoskuiskaa', 639, 1, 'Hevoskuiskaa@Paragon', 4)
+17/12/2014 19:03:09 Battle.net => https://eu.api.battle.net/wow/character/lightnings-blade/arx?locale=en&fields=items,talents&apikey=nm3jrgp8avwjpqnptby38z763t9afyes
+17/12/2014 19:03:11 (0.001) SELECT `muh_core_app_personagem`.`id`, `muh_core_app_personagem`.`nome`, `muh_core_app_personagem`.`ilvl_equipado`, `muh_core_app_personagem`.`guilda_id`, `muh_core_app_personagem`.`identificador` FROM `muh_core_app_personagem` WHERE (`muh_core_app_personagem`.`identificador` = 'Arx@Paragon' AND `muh_core_app_personagem`.`ilvl_equipado` = 632 AND `muh_core_app_personagem`.`guilda_id` = 1 AND `muh_core_app_personagem`.`nome` = 'Arx') LIMIT 21; args=('Arx@Paragon', 632, 1, 'Arx')
+17/12/2014 19:03:11 (0.001) UPDATE `muh_core_app_personagem` SET `nome` = 'Arx', `ilvl_equipado` = 632, `guilda_id` = 1, `identificador` = 'Arx@Paragon' WHERE `muh_core_app_personagem`.`id` = 5; args=(u'Arx', 632, 1, 'Arx@Paragon', 5)

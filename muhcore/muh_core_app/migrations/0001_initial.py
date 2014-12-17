@@ -11,30 +11,28 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Character',
+            name='Guilda',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('name', models.CharField(max_length=200)),
-                ('equipped_ilvl', models.IntegerField()),
+                ('nome', models.CharField(max_length=200)),
+                ('reino', models.CharField(max_length=200)),
+                ('identificador', models.CharField(unique=True, max_length=200)),
             ],
             options={
             },
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='Guild',
+            name='Personagem',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('name', models.CharField(max_length=200)),
+                ('nome', models.CharField(max_length=200)),
+                ('ilvl_equipado', models.IntegerField()),
+                ('identificador', models.CharField(unique=True, max_length=200)),
+                ('guilda', models.ForeignKey(to='muh_core_app.Guilda')),
             ],
             options={
             },
             bases=(models.Model,),
-        ),
-        migrations.AddField(
-            model_name='character',
-            name='guild',
-            field=models.ForeignKey(to='muh_core_app.Guild'),
-            preserve_default=True,
         ),
     ]
