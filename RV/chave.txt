@@ -1,0 +1,9 @@
+GAME APIS: BASIC PLAN
+Key: nm3jrgp8avwjpqnptby38z763t9afyes
+
+Application
+RV Raid Check
+ Key: nm3jrgp8avwjpqnptby38z763t9afyes 
+ Secret: Edt6pnruq8ntrE4YnwnBX4ckBnMddbf8 
+ Status: active 
+ Created: 5 seconds ago

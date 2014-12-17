@@ -1,0 +1,10 @@
+*.pyc
+.idea
+.DS_Store
+
+# vi backups
+*~
+.*.swp
+build
+*.egg
+*.egg-info
