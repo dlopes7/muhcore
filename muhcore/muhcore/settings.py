@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'muh_core_app'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,11 +59,11 @@ WSGI_APPLICATION = 'muhcore.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql'
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'RV',
-        'HOST': 'ĺocalhost',
+        'HOST': 'localhost',
         'PORT': '3306',
-        'USER': 'david'
+        'USER': 'david',
         'PASSWORD': 'mysql'
     }
 }
