@@ -890,7 +890,10 @@ class EquippedItem(Thing):
         self.name = data['name']
         self.quality = data['quality']
         self.icon = data['icon']
-        self.ilvl = data['itemLevel']
+
+        self.ilvl = data['itemLevel'] #Adicionado por David Lopes
+        self.bonus = data['bonusLists'] #Adicionado por David Lopes
+        self.context = data['context'] #Adicionado por David Lopes
 
         self.reforge = data['tooltipParams'].get('reforge')
         self.set = data['tooltipParams'].get('set')

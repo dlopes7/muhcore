@@ -27,7 +27,7 @@ table.tablesorter thead tr .header {
 }
 table.tablesorter tbody td {
 	background: none repeat scroll 0% 0% #202020;	
-
+	text-align: center;
 	padding: 6px;
 	font-size: 13pt;
 	vertical-align: top;

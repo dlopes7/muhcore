@@ -1,6 +1,13 @@
 {% load staticfiles %}
 <script type="text/javascript" src="{% static "js/jquery-1.11.1.min.js" %}"></script> 
-<script type="text/javascript" src="{% static "js/jquery.tablesorter.js" %}"></script> 
+<script type="text/javascript" src="{% static "js/jquery.tablesorter.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.tablesorter.pager.js" %}"></script>
+<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>
+
+<script type="text/javascript" >
+	var wowhead_tooltips = { "colorlinks": true, "iconizelinks": false, "renamelinks": false }
+</script> 
+
 <link rel="stylesheet" href="{% static "css/muhcore.css" %}" type="text/css" media="print, projection, screen" />
 
 
@@ -10,15 +17,64 @@
 <thead> 
 <tr> 
     <th>Personagem</th> 
-    <th>Ilvl Equipado</th> 
+    <th>ilvl</th>
+    <th>Main</th>
+    <th>Off</th> 
+    <th>Head</th>
+    <th>Shoulder</th>
+    <th>Neck</th>
+    <th>Back</th>
+    <th>Chest</th>
+    <th>Wrist</th>
+    <th>Waist</th>
+    <th>Hands</th>
+    <th>Legs</th>
+    <th>Feet</th>
+    <th>Ring 1</th>
+    <th>Ring 2</th>
+    <th>Trinket 1</th>
+    <th>Trinket 2</th>
 </tr> 
 </thead> 
 <tbody> 
 
-{% for membro in guilda.personagem_set.all|dictsortreversed:"ilvl_equipado"  %}
+{% for membro in guilda.personagem_guilda.all|dictsortreversed:"ilvl_equipado"  %}
 	<tr> 	
     	<td>{{ membro.nome }}</td> 
-    	<td>{{ membro.ilvl_equipado }}<td>
+    	<td>{{ membro.ilvl_equipado }}</td>
+    	<td><a href="http://www.wowhead.com/item={{membro.main_hand.wowhead_identificador}}"
+    		   rel="bonus={{membro.main_hand.get_bonus}}"> {{ membro.main_hand.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.off_hand.wowhead_identificador}}"
+    		   rel="bonus={{membro.off_hand.get_bonus}}"> {{ membro.off_hand.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.head.wowhead_identificador}}"
+    		   rel="bonus={{membro.head.get_bonus}}"> {{ membro.head.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.shoulder.wowhead_identificador}}"
+    		   rel="bonus={{membro.shoulder.get_bonus}}"> {{ membro.shoulder.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.neck.wowhead_identificador}}"
+    		   rel="bonus={{membro.neck.get_bonus}}"> {{ membro.neck.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.back.wowhead_identificador}}"
+    		   rel="bonus={{membro.back.get_bonus}}"> {{ membro.back.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.chest.wowhead_identificador}}"
+    		   rel="bonus={{membro.chest.get_bonus}}"> {{ membro.chest.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.wrist.wowhead_identificador}}"
+    		   rel="bonus={{membro.wrist.get_bonus}}"> {{ membro.wrist.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.waist.wowhead_identificador}}"
+    		   rel="bonus={{membro.waist.get_bonus}}"> {{ membro.waist.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.hands.wowhead_identificador}}"
+    		   rel="bonus={{membro.hands.get_bonus}}"> {{ membro.hands.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.legs.wowhead_identificador}}"
+    		   rel="bonus={{membro.legs.get_bonus}}"> {{ membro.legs.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.feet.wowhead_identificador}}"
+    		   rel="bonus={{membro.feet.get_bonus}}"> {{ membro.feet.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.finger1.wowhead_identificador}}"
+    		   rel="bonus={{membro.finger1.get_bonus}}"> {{ membro.finger1.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.finger2.wowhead_identificador}}"
+    		   rel="bonus={{membro.finger2.get_bonus}}"> {{ membro.finger2.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.trinket1.wowhead_identificador}}"
+    		   rel="bonus={{membro.trinket1.get_bonus}}"> {{ membro.trinket1.ilvl }}</a></td>
+    	<td><a href="http://www.wowhead.com/item={{membro.trinket2.wowhead_identificador}}"
+    		   rel="bonus={{membro.trinket2.get_bonus}}"> {{ membro.trinket2.ilvl }}</a></td>
+
     </tr> 
 {% endfor %}
 
@@ -28,7 +84,9 @@
 <script type="text/javascript"> 
    $(document).ready(function() 
     { 
-        $("#myTable").tablesorter(); 
+        $("#myTable")
+        .tablesorter();
+         
     } 
 ); 
 </script>

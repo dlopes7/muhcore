@@ -21,14 +21,25 @@ from muh_core_app.models import Personagem, Guilda, Equipamento
 
 
 def criarEquipamento(equipamento, slot):
-  equip_criado, created = Equipamento.objects.get_or_create(identificador = int(equipamento.id),
-                                                    defaults={'nome': equipamento.name,
-                                                    'origem' : equipament.context,
-                                                    'ilvl': int(equipamento.ilvl),
-                                                    'slot': slot})
+  if (equipamento != None):
+    bonus_id = str(equipamento.bonus).replace("[", "").replace("]", "").replace(" ", "").replace(",", "")
 
-  equip_criado.save()
-  return equip_criado
+    #print str(equipamento.id) + str(bonus_id)
+    equip_criado, created = Equipamento.objects.get_or_create(identificador = int(str(equipamento.id) + str(bonus_id)),
+                                                        defaults={'nome': equipamento.name,
+                                                        'ilvl': int(equipamento.ilvl),
+                                                        'bonus' :  equipamento.bonus,
+                                                        'wowhead_identificador': equipamento.id,
+                                                        'slot': slot,
+                                                        'origem': equipamento.context})
+
+    equip_criado.save()
+      #print equip_criado.origem  
+    #print equip_criado.wowhead_identificador, equipamento.id
+      #print equip_criado.get_bonus()
+    return equip_criado
+  else:
+    return None
 
 
 django.setup()
@@ -37,7 +48,8 @@ logging.basicConfig(filename='logs/processo.log',level=logging.DEBUG, format='%(
 
 connection = battlenet.Connection(public_key='nm3jrgp8avwjpqnptby38z763t9afyes', private_key='Edt6pnruq8ntrE4YnwnBX4ckBnMddbf8', locale='en')
 
-nome_guilda = 'EvecraideR Gaming'
+
+nome_guilda = 'Avalon'
 nome_realm = 'Nemesis'
 nome_battlegroup = battlenet.UNITED_STATES
 
@@ -59,47 +71,43 @@ else:
 
 logging.debug("Guilda: " + str(guilda) + " inserida no banco de dados")
 
+print len(guild.members)
+
 aux = 0
 for member in guild.members:
-  
-
   if member['character'].level == 100:
-
     nome_personagem = str(member['character'].name)
-
     aux+=1 #TODO DELETAR ESSA PORRA
 
-    print nome_personagem, ", ", member['character'].level
+    print nome_personagem
     membro_all = connection.get_character(nome_battlegroup, nome_realm, nome_personagem, fields=[Character.ITEMS, Character.TALENTS])
-
-    criarEquipamento(membro_all.equipment.head)
 
     membro, created = Personagem.objects.get_or_create(nome = nome_personagem,
                           identificador = str(nome_personagem) + "@" + str(guild.name),
                           defaults={'ilvl_equipado' : int(membro_all.equipment.average_item_level_equipped),
                                     'guilda' : guilda,
-                                    'head' : criarEquipamentos(membro_all.equipment.head),
-                                    'shoulder' : membro_all.equipment.shoulder,
-                                    'back' : membro_all.equipment.back,
-                                    'chest': membro_all.equipment.chest,
-                                    'wrist' : membro_all.equipment.wrist,
-                                    'hands' : membro_all.equipment.hands ,
-                                    'waist' : membro_all.equipment.waist,
-                                    'legs' : membro_all.equipment.legs,
-                                    'feet' : membro_all.equipment.feet,
-                                    'finger1' : membro_all.equipment.finger1,
-                                    'finger2' : membro_all.equipment.finger2,
-                                    'trinket1' : membro_all.equipment.trinket1,
-                                    'trinket2' : membro_all.equipment.trinket2,
-                                    'main_hand' : membro_all.equipment.main_hand,
-                                    'off_hand' : membro_all.equipment.off_hand})
-    print 
+                                    'head' : criarEquipamento(membro_all.equipment.head, 'head'),
+                                    'shoulder' : criarEquipamento(membro_all.equipment.shoulder, 'shoulder'),
+                                    'neck' : criarEquipamento(membro_all.equipment.shoulder, 'neck'),
+                                    'back' : criarEquipamento(membro_all.equipment.back, 'back'),
+                                    'chest': criarEquipamento(membro_all.equipment.chest, 'chest'),
+                                    'wrist' : criarEquipamento(membro_all.equipment.wrist, 'wrist'),
+                                    'hands' : criarEquipamento(membro_all.equipment.hands , 'hands'),
+                                    'waist' : criarEquipamento(membro_all.equipment.waist, 'waist'),
+                                    'legs' : criarEquipamento(membro_all.equipment.legs, 'legs'),
+                                    'feet' : criarEquipamento(membro_all.equipment.feet, 'feet'),
+                                    'finger1' : criarEquipamento(membro_all.equipment.finger1, 'finger1'),
+                                    'finger2' :  criarEquipamento(membro_all.equipment.finger2, 'finger2'),
+                                    'trinket1' : criarEquipamento(membro_all.equipment.trinket1, 'trinket1'),
+                                    'trinket2' : criarEquipamento(membro_all.equipment.trinket2, 'trinket2'),
+                                    'main_hand' : criarEquipamento(membro_all.equipment.main_hand, 'main_hand'),
+                                    'off_hand' : criarEquipamento(membro_all.equipment.off_hand, 'off_hand')})
 
     membro.save()
 
 
-  if aux == 1:  #TODO DELETAR ESSA PORRA
-    break       #TODO DELETAR ESSA PORRA
+  #if aux == 3:  #TODO DELETAR ESSA PORRA
+  #  break       #TODO DELETAR ESSA PORRA
 
 
 
