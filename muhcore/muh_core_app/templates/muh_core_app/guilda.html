@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<script type="text/javascript" src="{% static "js/jquery-1.11.1.min.js" %}"></script> 
+<script type="text/javascript" src="{% static "js/jquery.tablesorter.js" %}"></script> 
+<link rel="stylesheet" href="{% static "css/muhcore.css" %}" type="text/css" media="print, projection, screen" />
+
+
+<h1>{{ guilda.nome }} @ {{ guilda.reino }}</h1>
+
+<table id="myTable" class="tablesorter"> 
+<thead> 
+<tr> 
+    <th>Personagem</th> 
+    <th>Ilvl Equipado</th> 
+</tr> 
+</thead> 
+<tbody> 
+
+{% for membro in guilda.personagem_set.all|dictsortreversed:"ilvl_equipado"  %}
+	<tr> 	
+    	<td>{{ membro.nome }}</td> 
+    	<td>{{ membro.ilvl_equipado }}<td>
+    </tr> 
+{% endfor %}
+
+</tbody> 
+</table> 
+
+<script type="text/javascript"> 
+   $(document).ready(function() 
+    { 
+        $("#myTable").tablesorter(); 
+    } 
+); 
+</script>

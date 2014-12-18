@@ -1,0 +1,9 @@
+{% if lista_guildas %}
+    <ul>
+    {% for guilda in lista_guildas %}
+        <li><a href="{% url 'guilda' guilda.id %}">{{ guilda.nome }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Cadê as porras das guildas??</p>
+{% endif %}

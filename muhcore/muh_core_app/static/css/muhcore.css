@@ -1,0 +1,34 @@
+/* tables */
+body {
+    font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 24px;
+    color: #BBB;
+    background: none repeat scroll 0% 0% #1D1D1D;
+}
+table.tablesorter {
+	border-collapse: collapse;
+	font-family: Verdana,"Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 13pt;
+	width: 100%;
+	text-align: left;
+}
+
+table.tablesorter thead tr .header {
+	background: none repeat scroll 0% 0% #1F1F1F;
+	outline: medium none;
+	border-right: 1px solid #272727;
+	cursor: pointer;
+	padding: 5px 2px;
+	font-size: 15pt;
+	text-decoration: none;
+
+}
+table.tablesorter tbody td {
+	background: none repeat scroll 0% 0% #202020;	
+
+	padding: 6px;
+	font-size: 13pt;
+	vertical-align: top;
+}
