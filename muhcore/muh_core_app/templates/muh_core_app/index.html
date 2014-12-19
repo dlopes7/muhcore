@@ -1,9 +1,46 @@
+{% load staticfiles %}
+<script type="text/javascript" src="{% static "js/jquery-1.11.1.min.js" %}"></script> 
+<script type="text/javascript" src="{% static "js/jquery.tablesorter.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.tablesorter.pager.js" %}"></script>
+<script type="text/javascript" src="{% static "js/power.js" %}"></script>
+<script type="text/javascript"> 
+   $(document).ready(function() 
+    { 
+        $("#myTable")
+        .tablesorter();
+
+    } 
+); 
+</script>
+<link rel="stylesheet" href="{% static "css/muhcore.css" %}" type="text/css" media="print, projection, screen" />
+<h1>Guildas</h1>
+
+<table id="myTable" class="tablesorter"> 
+<thead> 
+<tr> 
+    <th>Guilda</th> 
+    <th>ilvl Médio</th>
+    <th>Level 100</th>
+    <th>Total</th> 
+
+</tr> 
+</thead> 
+<tbody> 
+
 {% if lista_guildas %}
-    <ul>
+    
     {% for guilda in lista_guildas %}
-        <li><a href="{% url 'guilda' guilda.id %}">{{ guilda.nome }}</a></li>
+    <tr>
+        <td><a href="{% url 'guilda' guilda.id %}">{{ guilda.nome }}</a></td>
+        <td>{{ guilda.get_ilvl_medio }}</td>
+        <td>{{ guilda.get_membros_lvl_100 }}</td>s
+        <td>{{ guilda.num_membros }}</td>
+    </tr>
     {% endfor %}
-    </ul>
+    
 {% else %}
     <p>Cadê as porras das guildas??</p>
 {% endif %}
+
+</tbody> 
+</table> 

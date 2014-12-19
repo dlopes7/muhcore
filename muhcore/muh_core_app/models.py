@@ -1,4 +1,7 @@
 from django.db import models
+from django.db.models import Avg
+
+from math import floor
 
 # Create your models here.
 
@@ -6,6 +9,14 @@ class Guilda(models.Model):
     nome = models.CharField(max_length=200)
     reino = models.CharField(max_length=200)
     identificador = models.CharField(max_length=200)
+    num_membros = models.IntegerField()
+
+    def get_membros_lvl_100(self):
+        return len(self.personagem_guilda.all())
+
+    def get_ilvl_medio(self):
+        return int(floor(self.personagem_guilda.all().aggregate(Avg('ilvl_equipado'))['ilvl_equipado__avg']))
+
 
 
     def __str__(self):
@@ -31,6 +42,10 @@ class Personagem(models.Model):
     nome = models.CharField(max_length=200)
     ilvl_equipado = models.IntegerField()
     identificador = models.CharField(max_length=200)
+    avatar = models.CharField(max_length=800)
+    color = models.CharField(max_length=200, default='1')
+    classe = models.CharField(max_length=200, default='1')
+    spec = models.CharField(max_length=200, default='1')
     guilda =  models.ForeignKey(Guilda, related_name='personagem_guilda', null=True, blank=True)
     head = models.ForeignKey(Equipamento, related_name='personagem_head', null=True, blank=True)
     shoulder = models.ForeignKey(Equipamento, related_name='personagem_shoulder', null=True, blank=True)

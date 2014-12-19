@@ -49,6 +49,18 @@ logging.basicConfig(filename='logs/processo.log',level=logging.DEBUG, format='%(
 connection = battlenet.Connection(public_key='nm3jrgp8avwjpqnptby38z763t9afyes', private_key='Edt6pnruq8ntrE4YnwnBX4ckBnMddbf8', locale='en')
 
 
+colors = {'Death Knight':'#C41F3B',
+          'Druid':'#FF7D0A',
+          'Hunter':'#ABD473',
+          'Mage':'#69CCF0',
+          'Monk':'#00FF96',
+          'Paladin':'#F58CBA',
+          'Priest':'#FFFFFF',
+          'Rogue':'#FFF569',
+          'Shaman':'#0070DE',
+          'Warlock':'#9482C9',
+          'Warrior':'#C79C6E'}
+
 nome_guilda = 'Avalon'
 nome_realm = 'Nemesis'
 nome_battlegroup = battlenet.UNITED_STATES
@@ -62,10 +74,11 @@ logging.debug("Conectado!")
 
 guilda, created = Guilda.objects.get_or_create(nome = str(guild.name),
                                                reino = str(guild.realm),
-                                               identificador = str(guild.name) + "@" + str(guild.realm)) 
+                                               identificador = str(guild.name) + "@" + str(guild.realm),
+                                               defaults = {'num_membros': len(guild.members)}) 
 
 if not created:
-  guilda.save()
+  guilda.save() 
 else:
   guilda.save()
 
@@ -79,12 +92,18 @@ for member in guild.members:
     nome_personagem = str(member['character'].name)
     aux+=1 #TODO DELETAR ESSA PORRA
 
-    print nome_personagem
+    print nome_personagem, 
     membro_all = connection.get_character(nome_battlegroup, nome_realm, nome_personagem, fields=[Character.ITEMS, Character.TALENTS])
+    print membro_all.get_class_name(), membro_all.get_spec_name(), membro_all.equipment.average_item_level_equipped
+
 
     membro, created = Personagem.objects.get_or_create(nome = nome_personagem,
                           identificador = str(nome_personagem) + "@" + str(guild.name),
                           defaults={'ilvl_equipado' : int(membro_all.equipment.average_item_level_equipped),
+                                    'color' : colors[membro_all.get_class_name()],
+                                    'classe' : membro_all.get_class_name(),
+                                    'spec' : membro_all.get_spec_name(),
+                                    'avatar' : membro_all.get_thumbnail_url(),
                                     'guilda' : guilda,
                                     'head' : criarEquipamento(membro_all.equipment.head, 'head'),
                                     'shoulder' : criarEquipamento(membro_all.equipment.shoulder, 'shoulder'),
@@ -106,7 +125,7 @@ for member in guild.members:
     membro.save()
 
 
-  #if aux == 3:  #TODO DELETAR ESSA PORRA
+  #if aux == 10:  #TODO DELETAR ESSA PORRA
   #  break       #TODO DELETAR ESSA PORRA
 
 

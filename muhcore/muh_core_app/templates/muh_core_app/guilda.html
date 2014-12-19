@@ -2,7 +2,7 @@
 <script type="text/javascript" src="{% static "js/jquery-1.11.1.min.js" %}"></script> 
 <script type="text/javascript" src="{% static "js/jquery.tablesorter.js" %}"></script>
 <script type="text/javascript" src="{% static "js/jquery.tablesorter.pager.js" %}"></script>
-<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>
+<script type="text/javascript" src="{% static "js/power.js" %}"></script>
 
 <script type="text/javascript" >
 	var wowhead_tooltips = { "colorlinks": true, "iconizelinks": false, "renamelinks": false }
@@ -40,8 +40,8 @@
 
 {% for membro in guilda.personagem_guilda.all|dictsortreversed:"ilvl_equipado"  %}
 	<tr> 	
-    	<td>{{ membro.nome }}</td> 
-    	<td>{{ membro.ilvl_equipado }}</td>
+    	<td class="member-tooltip"><font color="{{ membro.color }}"> {{ membro.nome }}</td> 
+    	<td> {{ membro.ilvl_equipado }}</td>
     	<td><a href="http://www.wowhead.com/item={{membro.main_hand.wowhead_identificador}}"
     		   rel="bonus={{membro.main_hand.get_bonus}}"> {{ membro.main_hand.ilvl }}</a></td>
     	<td><a href="http://www.wowhead.com/item={{membro.off_hand.wowhead_identificador}}"
@@ -86,7 +86,7 @@
     { 
         $("#myTable")
         .tablesorter();
-         
+
     } 
 ); 
 </script>
