@@ -5,7 +5,7 @@ from muh_core_app.models import Guilda
 
 
 def index(request):
-    lista_guildas = Guilda.objects.order_by('nome')[:5]
+    lista_guildas = Guilda.objects.order_by('nome')
     context = {'lista_guildas': lista_guildas}
     return render(request, 'muh_core_app/index.html', context)
 

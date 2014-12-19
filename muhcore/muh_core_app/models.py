@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models import Avg
+from django.db.models import Avg, Max, Min
 
 from math import floor
 
@@ -16,6 +16,12 @@ class Guilda(models.Model):
 
     def get_ilvl_medio(self):
         return int(floor(self.personagem_guilda.all().aggregate(Avg('ilvl_equipado'))['ilvl_equipado__avg']))
+
+    def get_maior_ilvl(self):
+        return int(floor(self.personagem_guilda.all().aggregate(Max('ilvl_equipado'))['ilvl_equipado__max']))
+
+    def get_menor_ilvl(self):
+        return int(floor(self.personagem_guilda.all().aggregate(Min('ilvl_equipado'))['ilvl_equipado__min']))
 
 
 

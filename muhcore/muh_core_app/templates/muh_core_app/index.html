@@ -19,7 +19,10 @@
 <thead> 
 <tr> 
     <th>Guilda</th> 
+    <th>Realm</th> 
     <th>ilvl Médio</th>
+    <th>Maior ilvl</th>
+    <th>Menor ilvl</th>
     <th>Level 100</th>
     <th>Total</th> 
 
@@ -32,8 +35,11 @@
     {% for guilda in lista_guildas %}
     <tr>
         <td><a href="{% url 'guilda' guilda.id %}">{{ guilda.nome }}</a></td>
+        <td>{{ guilda.reino }}</td>
         <td>{{ guilda.get_ilvl_medio }}</td>
-        <td>{{ guilda.get_membros_lvl_100 }}</td>s
+        <td>{{ guilda.get_maior_ilvl }}</td>
+        <td>{{ guilda.get_menor_ilvl }}</td>
+        <td>{{ guilda.get_membros_lvl_100 }}</td>
         <td>{{ guilda.num_membros }}</td>
     </tr>
     {% endfor %}

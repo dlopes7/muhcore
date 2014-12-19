@@ -1,3 +1,10 @@
+a:visited {
+    color: #00FF00;
+}
+/* unvisited link */
+a:link {
+    color: #FF0000;
+}
 /* tables */
 body {
     font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
