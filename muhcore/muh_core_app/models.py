@@ -24,7 +24,6 @@ class Guilda(models.Model):
         return int(floor(self.personagem_guilda.all().aggregate(Min('ilvl_equipado'))['ilvl_equipado__min']))
 
 
-
     def __str__(self):
     	return self.nome + "@" + self.reino
 
@@ -50,8 +49,12 @@ class Personagem(models.Model):
     identificador = models.CharField(max_length=200)
     avatar = models.CharField(max_length=800)
     color = models.CharField(max_length=200, default='1')
+
     classe = models.CharField(max_length=200, default='1')
     spec = models.CharField(max_length=200, default='1')
+    icon_spec = models.CharField(max_length=600, default='1')
+
+
     guilda =  models.ForeignKey(Guilda, related_name='personagem_guilda', null=True, blank=True)
     head = models.ForeignKey(Equipamento, related_name='personagem_head', null=True, blank=True)
     shoulder = models.ForeignKey(Equipamento, related_name='personagem_shoulder', null=True, blank=True)

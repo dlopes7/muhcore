@@ -62,15 +62,16 @@ colors = {'Death Knight':'#C41F3B',
           'Warrior':'#C79C6E'}
 
 
-nome_guilda = 'Method'
-nome_realm = 'Twisting Nether'
-nome_battlegroup = battlenet.EUROPE
+nome_guilda = 'Taunta Que Eu Aggrei'
+nome_realm = 'Azralon'
+nome_battlegroup = battlenet.UNITED_STATES
 
 logging.debug("Guilda: " + nome_guilda + ", Realm: " + nome_realm + " BG: " + str(nome_battlegroup))
 
 logging.debug("Conectando a battlenet")
+print "Conectando a battlenet..."
 guild = connection.get_guild(nome_battlegroup, nome_realm, nome_guilda, fields=[Guild.MEMBERS])
-logging.debug("Conectado!")
+print "Conectado!"
 
 
 guilda, created = Guilda.objects.get_or_create(nome = str(guild.name),
@@ -83,9 +84,9 @@ if not created:
 else:
   guilda.save()
 
-logging.debug("Guilda: " + str(guilda) + " inserida no banco de dados")
+print "Guilda: " + str(guilda) + " inserida no banco de dados"
 
-print len(guild.members)
+print len(guild.members), "membros"
 
 aux = 0
 for member in guild.members:
@@ -106,6 +107,7 @@ for member in guild.members:
                                       'color' : colors[membro_all.get_class_name()],
                                       'classe' : membro_all.get_class_name(),
                                       'spec' : membro_all.get_spec_name(),
+                                      'icon_spec' : membro_all.get_spec_icon(),
                                       'avatar' : membro_all.get_thumbnail_url(),
                                       'guilda' : guilda,
                                       'head' : criarEquipamento(membro_all.equipment.head, 'head'),
@@ -130,7 +132,7 @@ for member in guild.members:
       continue
 
 
-  #if aux == 10:  #TODO DELETAR ESSA PORRA
+  #if aux == 20:  #TODO DELETAR ESSA PORRA
   #  break       #TODO DELETAR ESSA PORRA
 
 

@@ -316,6 +316,13 @@ class Character(LazyThing):
         spec_name = self.get_spec_name()
         class_name = self.get_class_name()
 
+    def get_spec_icon(self):
+        for talent in self.talents:
+            if talent.selected:
+                return talent.get_icon_url()
+
+        return ''
+
         return ('%s %s' % (spec_name, class_name)).strip()
 
     def get_race_name(self):

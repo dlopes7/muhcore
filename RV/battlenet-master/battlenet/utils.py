@@ -27,7 +27,8 @@ def make_icon_url(region, icon, size='large'):
         size = 56
 
     # http:// <region> + .battle.net/static-render/ + <region> + / + <the string you got from API as thumbnail> 
-    return 'http://%s.battle.net/static-render/%s/%s.jpg' % (region, region, icon)
+    #http://us.media.blizzard.com/wow/icons/56/<icon_name>.jpg
+    return 'http://%s.media.blizzard.com/wow/icons/%d/%s.jpg' % (region, size, icon)
 
 
 def make_connection():

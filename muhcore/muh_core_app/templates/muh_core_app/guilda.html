@@ -11,11 +11,16 @@
 <link rel="stylesheet" href="{% static "css/muhcore.css" %}" type="text/css" media="print, projection, screen" />
 
 
-<h1>{{ guilda.nome }} @ {{ guilda.reino }}</h1>
+<h1>{{ guilda.nome }} @ {{ guilda.reino }} </h1>
+<h3>{{ guilda.personagem_guilda.all|length }} membros nível 100 </h3>
+
+
+
 
 <table id="myTable" class="tablesorter"> 
 <thead> 
 <tr> 
+    <th>Spec</th>
     <th>Personagem</th> 
     <th>ilvl</th>
     <th>Main</th>
@@ -32,15 +37,17 @@
     <th>Feet</th>
     <th>Ring 1</th>
     <th>Ring 2</th>
-    <th>Trinket 1</th>
-    <th>Trinket 2</th>
+    <th>Trink 1</th>
+    <th>Trink 2</th>
 </tr> 
 </thead> 
 <tbody> 
 
-{% for membro in guilda.personagem_guilda.all|dictsortreversed:"ilvl_equipado"  %}
-	<tr> 	
-    	<td class="member-tooltip"><font color="{{ membro.color }}"> {{ membro.nome }}</td> 
+{% for membro in lista_membros|dictsortreversed:"ilvl_equipado"  %}
+	<tr>
+        
+        <td><img src="{{membro.icon_spec}}" alt="{{membro.spec}}"height="18" width="18"> </td> 
+    	<td> <font color="{{ membro.color }}"> {{ membro.nome }}</td> 
     	<td> {{ membro.ilvl_equipado }}</td>
     	<td><a href="http://www.wowhead.com/item={{membro.main_hand.wowhead_identificador}}"
     		   rel="bonus={{membro.main_hand.get_bonus}}"> {{ membro.main_hand.ilvl }}</a></td>
@@ -81,12 +88,34 @@
 </tbody> 
 </table> 
 
+<div class="pagination">
+    <span class="step-links">
+        {% if lista_membros.has_previous %}
+            <a href="?page={{ lista_membros.previous_page_number }}">anterior</a>
+        {% endif %}
+
+        <span class="current">
+            Página {{ lista_membros.number }} de {{ lista_membros.paginator.num_pages }}
+        </span>
+
+        {% if lista_membros.has_next %}
+            <a href="?page={{ lista_membros.next_page_number }}">próxima</a>
+        {% endif %}
+    </span>
+</div>
+
 <script type="text/javascript"> 
    $(document).ready(function() 
     { 
         $("#myTable")
-        .tablesorter();
+        .tablesorter({
+          textExtraction:function(s){
+                if($(s).find('img').length == 0) return $(s).text();
+                return $(s).find('img').attr('alt');
+          }
+    });
 
     } 
+
 ); 
 </script>
