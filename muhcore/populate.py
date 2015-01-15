@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import os
+import os, traceback
 
 os.environ['PYTHONPATH'] = '/home/david/Documents/projeto/muhcore'
 os.environ['DJANGO_SETTINGS_MODULE'] = 'muhcore.settings'
@@ -17,7 +17,14 @@ import django
 from collections import Counter
 
 from battlenet import Connection, Character, Guild
-from muh_core_app.models import Personagem, Guilda, Equipamento
+from muh_core_app.models import Personagem, Guilda, Equipamento, Historico
+from django.utils import timezone
+
+#-------------------Guilda a ser scaneada -------
+nome_guilda = 'Taunta Que Eu Aggrei'
+nome_realm = 'Azralon'
+nome_battlegroup = battlenet.UNITED_STATES
+#------------------------------------------------
 
 
 def criarEquipamento(equipamento, slot):
@@ -62,9 +69,9 @@ colors = {'Death Knight':'#C41F3B',
           'Warrior':'#C79C6E'}
 
 
-nome_guilda = 'Taunta Que Eu Aggrei'
-nome_realm = 'Azralon'
-nome_battlegroup = battlenet.UNITED_STATES
+ ## http://imgur.com/InLkJUj
+
+
 
 logging.debug("Guilda: " + nome_guilda + ", Realm: " + nome_realm + " BG: " + str(nome_battlegroup))
 
@@ -126,9 +133,42 @@ for member in guild.members:
                                       'trinket2' : criarEquipamento(membro_all.equipment.trinket2, 'trinket2'),
                                       'main_hand' : criarEquipamento(membro_all.equipment.main_hand, 'main_hand'),
                                       'off_hand' : criarEquipamento(membro_all.equipment.off_hand, 'off_hand')})
+    
+      if not created:
+        #print 'OPA ja existe', membro.ilvl_equipado, 
 
+        membro.ilvl_equipado = int(membro_all.equipment.average_item_level_equipped)
+        membro.spec = membro_all.get_spec_name()
+        membro.icon_spec = membro_all.get_spec_icon()
+        membro.avatar = membro_all.get_thumbnail_url()
+        membro.guilda = guilda
+        membro.head = criarEquipamento(membro_all.equipment.head, 'head')
+        membro.shoulder = criarEquipamento(membro_all.equipment.shoulder, 'shoulder')
+        membro.neck = criarEquipamento(membro_all.equipment.shoulder, 'neck')
+        membro.back = criarEquipamento(membro_all.equipment.back, 'back')
+        membro.chest = criarEquipamento(membro_all.equipment.chest, 'chest')
+        membro.wrist = criarEquipamento(membro_all.equipment.wrist, 'wrist')
+        membro.hands = criarEquipamento(membro_all.equipment.hands , 'hands')
+        membro.waist = criarEquipamento(membro_all.equipment.waist, 'waist')
+        membro.legs = criarEquipamento(membro_all.equipment.legs, 'legs')
+        membro.feet = criarEquipamento(membro_all.equipment.feet, 'feet')
+        membro.finger1 = criarEquipamento(membro_all.equipment.finger1, 'finger1')
+        membro.finger2 =criarEquipamento(membro_all.equipment.finger2, 'finger2')
+        membro.trinket1 = criarEquipamento(membro_all.equipment.trinket1, 'trinket1')
+        membro.trinket2 = criarEquipamento(membro_all.equipment.trinket2, 'trinket2')
+        membro.main_hand = criarEquipamento(membro_all.equipment.main_hand, 'main_hand')
+        membro.off_hand = criarEquipamento(membro_all.equipment.off_hand, 'off_hand')
+        #print membro.ilvl_equipado
+
+      #print membro, created
+
+      
       membro.save()
-    except Exception  :
+
+      historico = Historico.objects.get_or_create(data = timezone.now(), defaults = {'personagem': membro,
+                                                              'ilvl_equipado': membro.ilvl_equipado})
+    except:
+      traceback.print_exc()
       continue
 
 

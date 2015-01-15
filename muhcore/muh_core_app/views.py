@@ -4,7 +4,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 # Create your views here.
-from muh_core_app.models import Guilda
+from muh_core_app.models import Guilda, Personagem, Historico
 
 
 def index(request):
@@ -18,6 +18,7 @@ def guilda(request, guilda_id, filtros={}):
 	guilda = Guilda.objects.get(pk=guilda_id)
 	membros = guilda.personagem_guilda.all().order_by('-ilvl_equipado')
 
+	#Apenas os top X membros
 	paginator = Paginator(membros, 20)
 
 	page = request.GET.get('page')
@@ -34,3 +35,8 @@ def guilda(request, guilda_id, filtros={}):
 	return render_to_response('muh_core_app/guilda.html', {"lista_membros": lista_membros, 'guilda':guilda})
 
 	#return render(request, 'muh_core_app/guilda.html', {'guilda': guilda})
+
+def personagem(request, personagem_id):
+	personagem = Personagem.objects.get(pk=personagem_id)
+	historico = Historico.objects.filter(personagem = personagem)
+	return render(request, 'muh_core_app/personagem.html', {'personagem': personagem, 'historico':historico})

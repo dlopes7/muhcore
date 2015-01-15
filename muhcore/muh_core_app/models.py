@@ -34,7 +34,7 @@ class Equipamento(models.Model):
     bonus = models.CharField(max_length=200)
     origem = models.CharField(max_length=200)
     identificador = models.CharField(max_length=300)
-    wowhead_identificador = models.CharField(max_length=200)
+    wowhead_identificador = models.CharField(max_length=300)
     def __str__(self):
 	   return self.nome
 
@@ -76,5 +76,11 @@ class Personagem(models.Model):
 
     def __str__(self):
     	return self.nome
+
+class Historico(models.Model):
+    
+    data =  models.DateTimeField(auto_now=True)
+    personagem =  models.ForeignKey(Personagem, null=True, blank=True)
+    ilvl_equipado = ilvl_equipado = models.IntegerField()
 
 
