@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<script type="text/javascript" src="{% static "js/Chart.js" %}"></script> 
+<script type="text/javascript" src="{% static "js/jquery-1.11.1.min.js" %}"></script> 
+
+<link rel="stylesheet" href="{% static "css/muhcore.css" %}" type="text/css" media="print, projection, screen" />
+
+
+<canvas id="myChart" width="800" height="400"></canvas>
+
+
+<script type="text/javascript">
+	var ctx = $("#myChart").get(0).getContext("2d");
+
+	//alert("{{datas|safe}} {{ilvls|safe}}")
+
+	var data = {
+    labels: {{datas|safe}},
+    datasets: [
+		        {
+		            label: "{{personagem.nome}}",
+		            strokeColor: "rgba(151,187,205,1)",
+		            pointColor: "rgba(151,187,205,1)",
+		            pointStrokeColor: "#fff",
+		            pointHighlightFill: "#fff",
+		            pointHighlightStroke: "rgba(151,187,205,1)",
+		            data: {{ilvls|safe}}
+		        }
+	    	]
+		};
+
+	var myLineChart = new Chart(ctx).Line(data, {});
+
+ 
+</script>

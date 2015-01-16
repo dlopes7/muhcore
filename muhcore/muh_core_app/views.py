@@ -1,7 +1,6 @@
 from django.shortcuts import render, render_to_response
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
-
+import json
 
 # Create your views here.
 from muh_core_app.models import Guilda, Personagem, Historico
@@ -39,4 +38,15 @@ def guilda(request, guilda_id, filtros={}):
 def personagem(request, personagem_id):
 	personagem = Personagem.objects.get(pk=personagem_id)
 	historico = Historico.objects.filter(personagem = personagem)
-	return render(request, 'muh_core_app/personagem.html', {'personagem': personagem, 'historico':historico})
+
+	datas = []
+	ilvls = []
+
+	for h in historico:
+		datas.append(int(h.data.strftime("%d")))
+		ilvls.append(int(h.ilvl_equipado))
+
+	datas = json.dumps(datas)
+	ilvls = json.dumps(ilvls)
+
+	return render(request, 'muh_core_app/personagem.html', {'personagem': personagem, 'datas':datas, 'ilvls':ilvls})
