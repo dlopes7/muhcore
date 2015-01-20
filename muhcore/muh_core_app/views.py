@@ -43,10 +43,15 @@ def personagem(request, personagem_id):
 	ilvls = []
 
 	for h in historico:
-		datas.append(int(h.data.strftime("%d")))
+		datas.append(str(h.data.strftime("%d")) + "/" + str(h.data.strftime("%m")))
 		ilvls.append(int(h.ilvl_equipado))
 
 	datas = json.dumps(datas)
 	ilvls = json.dumps(ilvls)
 
 	return render(request, 'muh_core_app/personagem.html', {'personagem': personagem, 'datas':datas, 'ilvls':ilvls})
+
+def chart_all(request, guilda_id):
+	guilda = Guilda.objects.get(pk=guilda_id)
+	membros = guilda.personagem_guilda.all()
+

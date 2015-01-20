@@ -2,6 +2,8 @@ from django.db import models
 from django.db.models import Avg, Max, Min
 
 from math import floor
+import datetime
+from django.utils import timezone
 
 # Create your models here.
 
@@ -77,10 +79,27 @@ class Personagem(models.Model):
     def __str__(self):
     	return self.nome
 
+    def compare_gear_last_week(self):
+        data_ultima_semana = timezone.now() - datetime.timedelta(weeks=1)
+        historico = Historico.objects.filter(personagem = self, data__lt=data_ultima_semana)[:1]
+
+        if (len(historico) == 0):
+            historico = Historico.objects.filter(personagem = self).order_by('id')[0]
+            #historico = Historico.objects.filter(personagem = p).order_by('-id')[0]
+
+        if ((self.ilvl_equipado - historico.ilvl_equipado) < 0):
+            sinal = '-'
+        else:
+            sinal = '+'
+
+        #historico = Historico.objects.filter(personagem = p, data__lt=data_ultima_semana)[:1]
+        return sinal + str(abs(self.ilvl_equipado - historico.ilvl_equipado))
+        #return historico.ilvl_equipado
+
+
 class Historico(models.Model):
     
     data =  models.DateTimeField(auto_now=True)
     personagem =  models.ForeignKey(Personagem, null=True, blank=True)
     ilvl_equipado = ilvl_equipado = models.IntegerField()
-
 

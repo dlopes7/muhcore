@@ -14,6 +14,7 @@ import operator
 import logging
 import django
 
+
 from collections import Counter
 
 from battlenet import Connection, Character, Guild
@@ -21,10 +22,18 @@ from muh_core_app.models import Personagem, Guilda, Equipamento, Historico
 from django.utils import timezone
 
 #-------------------Guilda a ser scaneada -------
-nome_guilda = 'Taunta Que Eu Aggrei'
-nome_realm = 'Azralon'
-nome_battlegroup = battlenet.UNITED_STATES
+#nome_guilda = 'Taunta Que Eu Aggrei'
+#nome_realm = 'Azralon'
+#nome_battlegroup = battlenet.UNITED_STATES
 #------------------------------------------------
+
+array_guildas = [['Taunta Que Eu Aggrei', 'Azralon', battlenet.UNITED_STATES],
+                 #['Avalon', 'Nemesis', battlenet.UNITED_STATES],
+                 ['Blood Fury', 'Azralon', battlenet.UNITED_STATES],
+                 ['Rise Above', 'Azralon', battlenet.UNITED_STATES],
+                 ['WICKED SICK', 'Azralon', battlenet.UNITED_STATES],
+                 ['Paragon', 'Lightnings Blade', battlenet.EUROPE],
+                 ['Method', 'Twisting Nether', battlenet.EUROPE]]
 
 
 def criarEquipamento(equipamento, slot):
@@ -72,108 +81,112 @@ colors = {'Death Knight':'#C41F3B',
  ## http://imgur.com/InLkJUj
 
 
+for processar_guilda in array_guildas:
+  nome_guilda = processar_guilda[0]
+  nome_realm = processar_guilda[1]
+  nome_battlegroup = processar_guilda[2]
 
-logging.debug("Guilda: " + nome_guilda + ", Realm: " + nome_realm + " BG: " + str(nome_battlegroup))
+  logging.debug("Guilda: " + nome_guilda + ", Realm: " + nome_realm + " BG: " + str(nome_battlegroup))
 
-logging.debug("Conectando a battlenet")
-print "Conectando a battlenet..."
-guild = connection.get_guild(nome_battlegroup, nome_realm, nome_guilda, fields=[Guild.MEMBERS])
-print "Conectado!"
-
-
-guilda, created = Guilda.objects.get_or_create(nome = str(guild.name),
-                                               reino = str(guild.realm),
-                                               identificador = str(guild.name) + "@" + str(guild.realm),
-                                               defaults = {'num_membros': len(guild.members)}) 
-
-if not created:
-  guilda.save() 
-else:
-  guilda.save()
-
-print "Guilda: " + str(guilda) + " inserida no banco de dados"
-
-print len(guild.members), "membros"
-
-aux = 0
-for member in guild.members:
-  if member['character'].level == 100:
-    nome_personagem = str(member['character'].name)
-    aux+=1 #TODO DELETAR ESSA PORRA
-
-    print nome_personagem,
-
-    try: 
-      membro_all = connection.get_character(nome_battlegroup, nome_realm, nome_personagem, fields=[Character.ITEMS, Character.TALENTS])
-      print membro_all.get_class_name(), membro_all.get_spec_name(), membro_all.equipment.average_item_level_equipped
+  logging.debug("Conectando a battlenet")
+  print "Conectando a battlenet..."
+  guild = connection.get_guild(nome_battlegroup, nome_realm, nome_guilda, fields=[Guild.MEMBERS])
+  print "Conectado!"
 
 
-      membro, created = Personagem.objects.get_or_create(nome = nome_personagem,
-                            identificador = str(nome_personagem) + "@" + str(guild.name),
-                            defaults={'ilvl_equipado' : int(membro_all.equipment.average_item_level_equipped),
-                                      'color' : colors[membro_all.get_class_name()],
-                                      'classe' : membro_all.get_class_name(),
-                                      'spec' : membro_all.get_spec_name(),
-                                      'icon_spec' : membro_all.get_spec_icon(),
-                                      'avatar' : membro_all.get_thumbnail_url(),
-                                      'guilda' : guilda,
-                                      'head' : criarEquipamento(membro_all.equipment.head, 'head'),
-                                      'shoulder' : criarEquipamento(membro_all.equipment.shoulder, 'shoulder'),
-                                      'neck' : criarEquipamento(membro_all.equipment.shoulder, 'neck'),
-                                      'back' : criarEquipamento(membro_all.equipment.back, 'back'),
-                                      'chest': criarEquipamento(membro_all.equipment.chest, 'chest'),
-                                      'wrist' : criarEquipamento(membro_all.equipment.wrist, 'wrist'),
-                                      'hands' : criarEquipamento(membro_all.equipment.hands , 'hands'),
-                                      'waist' : criarEquipamento(membro_all.equipment.waist, 'waist'),
-                                      'legs' : criarEquipamento(membro_all.equipment.legs, 'legs'),
-                                      'feet' : criarEquipamento(membro_all.equipment.feet, 'feet'),
-                                      'finger1' : criarEquipamento(membro_all.equipment.finger1, 'finger1'),
-                                      'finger2' :  criarEquipamento(membro_all.equipment.finger2, 'finger2'),
-                                      'trinket1' : criarEquipamento(membro_all.equipment.trinket1, 'trinket1'),
-                                      'trinket2' : criarEquipamento(membro_all.equipment.trinket2, 'trinket2'),
-                                      'main_hand' : criarEquipamento(membro_all.equipment.main_hand, 'main_hand'),
-                                      'off_hand' : criarEquipamento(membro_all.equipment.off_hand, 'off_hand')})
-    
-      if not created:
-        #print 'OPA ja existe', membro.ilvl_equipado, 
+  guilda, created = Guilda.objects.get_or_create(nome = str(guild.name),
+                                                 reino = str(guild.realm),
+                                                 identificador = str(guild.name) + "@" + str(guild.realm),
+                                                 defaults = {'num_membros': len(guild.members)}) 
 
-        membro.ilvl_equipado = int(membro_all.equipment.average_item_level_equipped)
-        membro.spec = membro_all.get_spec_name()
-        membro.icon_spec = membro_all.get_spec_icon()
-        membro.avatar = membro_all.get_thumbnail_url()
-        membro.guilda = guilda
-        membro.head = criarEquipamento(membro_all.equipment.head, 'head')
-        membro.shoulder = criarEquipamento(membro_all.equipment.shoulder, 'shoulder')
-        membro.neck = criarEquipamento(membro_all.equipment.shoulder, 'neck')
-        membro.back = criarEquipamento(membro_all.equipment.back, 'back')
-        membro.chest = criarEquipamento(membro_all.equipment.chest, 'chest')
-        membro.wrist = criarEquipamento(membro_all.equipment.wrist, 'wrist')
-        membro.hands = criarEquipamento(membro_all.equipment.hands , 'hands')
-        membro.waist = criarEquipamento(membro_all.equipment.waist, 'waist')
-        membro.legs = criarEquipamento(membro_all.equipment.legs, 'legs')
-        membro.feet = criarEquipamento(membro_all.equipment.feet, 'feet')
-        membro.finger1 = criarEquipamento(membro_all.equipment.finger1, 'finger1')
-        membro.finger2 =criarEquipamento(membro_all.equipment.finger2, 'finger2')
-        membro.trinket1 = criarEquipamento(membro_all.equipment.trinket1, 'trinket1')
-        membro.trinket2 = criarEquipamento(membro_all.equipment.trinket2, 'trinket2')
-        membro.main_hand = criarEquipamento(membro_all.equipment.main_hand, 'main_hand')
-        membro.off_hand = criarEquipamento(membro_all.equipment.off_hand, 'off_hand')
-        #print membro.ilvl_equipado
+  if not created:
+    guilda.save() 
+  else:
+    guilda.save()
 
-      #print membro, created
+  print "Guilda: " + str(guilda) + " inserida no banco de dados"
 
+  print len(guild.members), "membros"
+
+  aux = 0
+  for member in guild.members:
+    if member['character'].level == 100:
+      nome_personagem = str(member['character'].name)
+      aux+=1 #TODO DELETAR ESSA PORRA
+
+      print nome_personagem,
+
+      try: 
+        membro_all = connection.get_character(nome_battlegroup, nome_realm, nome_personagem, fields=[Character.ITEMS, Character.TALENTS])
+        print membro_all.get_class_name(), membro_all.get_spec_name(), membro_all.equipment.average_item_level_equipped
+
+
+        membro, created = Personagem.objects.get_or_create(nome = nome_personagem,
+                              identificador = str(nome_personagem) + "@" + str(guild.name),
+                              defaults={'ilvl_equipado' : int(membro_all.equipment.average_item_level_equipped),
+                                        'color' : colors[membro_all.get_class_name()],
+                                        'classe' : membro_all.get_class_name(),
+                                        'spec' : membro_all.get_spec_name(),
+                                        'icon_spec' : membro_all.get_spec_icon(),
+                                        'avatar' : membro_all.get_thumbnail_url(),
+                                        'guilda' : guilda,
+                                        'head' : criarEquipamento(membro_all.equipment.head, 'head'),
+                                        'shoulder' : criarEquipamento(membro_all.equipment.shoulder, 'shoulder'),
+                                        'neck' : criarEquipamento(membro_all.equipment.shoulder, 'neck'),
+                                        'back' : criarEquipamento(membro_all.equipment.back, 'back'),
+                                        'chest': criarEquipamento(membro_all.equipment.chest, 'chest'),
+                                        'wrist' : criarEquipamento(membro_all.equipment.wrist, 'wrist'),
+                                        'hands' : criarEquipamento(membro_all.equipment.hands , 'hands'),
+                                        'waist' : criarEquipamento(membro_all.equipment.waist, 'waist'),
+                                        'legs' : criarEquipamento(membro_all.equipment.legs, 'legs'),
+                                        'feet' : criarEquipamento(membro_all.equipment.feet, 'feet'),
+                                        'finger1' : criarEquipamento(membro_all.equipment.finger1, 'finger1'),
+                                        'finger2' :  criarEquipamento(membro_all.equipment.finger2, 'finger2'),
+                                        'trinket1' : criarEquipamento(membro_all.equipment.trinket1, 'trinket1'),
+                                        'trinket2' : criarEquipamento(membro_all.equipment.trinket2, 'trinket2'),
+                                        'main_hand' : criarEquipamento(membro_all.equipment.main_hand, 'main_hand'),
+                                        'off_hand' : criarEquipamento(membro_all.equipment.off_hand, 'off_hand')})
       
-      membro.save()
+        if not created:
+          #print 'OPA ja existe', membro.ilvl_equipado, 
 
-      historico = Historico.objects.get_or_create(data = timezone.now(), defaults = {'personagem': membro,
-                                                              'ilvl_equipado': membro.ilvl_equipado})
-    except:
-      traceback.print_exc()
-      continue
+          membro.ilvl_equipado = int(membro_all.equipment.average_item_level_equipped)
+          membro.spec = membro_all.get_spec_name()
+          membro.icon_spec = membro_all.get_spec_icon()
+          membro.avatar = membro_all.get_thumbnail_url()
+          membro.guilda = guilda
+          membro.head = criarEquipamento(membro_all.equipment.head, 'head')
+          membro.shoulder = criarEquipamento(membro_all.equipment.shoulder, 'shoulder')
+          membro.neck = criarEquipamento(membro_all.equipment.shoulder, 'neck')
+          membro.back = criarEquipamento(membro_all.equipment.back, 'back')
+          membro.chest = criarEquipamento(membro_all.equipment.chest, 'chest')
+          membro.wrist = criarEquipamento(membro_all.equipment.wrist, 'wrist')
+          membro.hands = criarEquipamento(membro_all.equipment.hands , 'hands')
+          membro.waist = criarEquipamento(membro_all.equipment.waist, 'waist')
+          membro.legs = criarEquipamento(membro_all.equipment.legs, 'legs')
+          membro.feet = criarEquipamento(membro_all.equipment.feet, 'feet')
+          membro.finger1 = criarEquipamento(membro_all.equipment.finger1, 'finger1')
+          membro.finger2 =criarEquipamento(membro_all.equipment.finger2, 'finger2')
+          membro.trinket1 = criarEquipamento(membro_all.equipment.trinket1, 'trinket1')
+          membro.trinket2 = criarEquipamento(membro_all.equipment.trinket2, 'trinket2')
+          membro.main_hand = criarEquipamento(membro_all.equipment.main_hand, 'main_hand')
+          membro.off_hand = criarEquipamento(membro_all.equipment.off_hand, 'off_hand')
+          #print membro.ilvl_equipado
+
+        #print membro, created
+
+        
+        membro.save()
+
+        historico = Historico.objects.get_or_create(data = timezone.now(), defaults = {'personagem': membro,
+                                                                'ilvl_equipado': membro.ilvl_equipado})
+      except:
+        traceback.print_exc()
+        continue
 
 
-  #if aux == 20:  #TODO DELETAR ESSA PORRA
-  #  break       #TODO DELETAR ESSA PORRA
+    #if aux == 20:  #TODO DELETAR ESSA PORRA
+    #  break       #TODO DELETAR ESSA PORRA
 
 
 

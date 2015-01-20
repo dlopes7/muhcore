@@ -22,7 +22,7 @@
 <tr> 
     <th>Spec</th>
     <th>Personagem</th> 
-    <th>ilvl</th>
+    <th>ilvl (diff)</th>
     <th>Main</th>
     <th>Off</th> 
     <th>Head</th>
@@ -50,7 +50,7 @@
     	<!--<td> <a href="http://us.battle.net/wow/en/character/{{guilda.reino}}/{{membro.nome}}/advanced" target="_blank"><font color="{{ membro.color }}">{{ membro.nome }}</a></td> -->
         <td> <a href="{% url 'personagem' membro.id %}" target="_blank"><font color="{{ membro.color }}">{{ membro.nome }}</a></td> 
 
-    	<td> {{ membro.ilvl_equipado }}</td>
+    	<td> {{ membro.ilvl_equipado }} ({{ membro.compare_gear_last_week }})</td>
     	<td><a href="http://www.wowhead.com/item={{membro.main_hand.wowhead_identificador}}"
     		   rel="bonus={{membro.main_hand.get_bonus}}"> {{ membro.main_hand.ilvl }}</a></td>
     	<td><a href="http://www.wowhead.com/item={{membro.off_hand.wowhead_identificador}}"
