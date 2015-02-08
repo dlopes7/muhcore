@@ -13,7 +13,7 @@ import battlenet
 import operator
 import logging
 import django
-
+import re
 
 from collections import Counter
 
@@ -27,14 +27,15 @@ from django.utils import timezone
 #nome_battlegroup = battlenet.UNITED_STATES
 #------------------------------------------------
 
-array_guildas = [['Taunta Que Eu Aggrei', 'Azralon', battlenet.UNITED_STATES],
-                 #['Avalon', 'Nemesis', battlenet.UNITED_STATES],
+array_guildas = [['Paradox', 'Nemesis', battlenet.UNITED_STATES],
                  ['Blood Fury', 'Azralon', battlenet.UNITED_STATES],
                  ['Rise Above', 'Azralon', battlenet.UNITED_STATES],
                  ['WICKED SICK', 'Azralon', battlenet.UNITED_STATES],
-                 ['Paragon', 'Lightnings Blade', battlenet.EUROPE],
-                 ['Method', 'Twisting Nether', battlenet.EUROPE]]
+                 ['Paragon', 'Lightning\'s Blade', battlenet.EUROPE],
+                 ['Method', 'Twisting Nether', battlenet.EUROPE],
+                 ['Avalon', 'Nemesis', battlenet.UNITED_STATES]]
 
+with_members = True
 
 def criarEquipamento(equipamento, slot):
   if (equipamento != None):
@@ -88,31 +89,57 @@ for processar_guilda in array_guildas:
 
   logging.debug("Guilda: " + nome_guilda + ", Realm: " + nome_realm + " BG: " + str(nome_battlegroup))
 
+  print "Conectando ao WoWProgress"
+  url_wowprogress = "http://www.wowprogress.com/guild/"+ nome_battlegroup +"/"+ nome_realm.replace(' ', '-').replace('\'', '-') + "/" + nome_guilda
+  print url_wowprogress
+  pagina = urllib.urlopen(url_wowprogress)
+  print "Conectado!"
+
+  conteudo = pagina.read()
+  id_wowprogress = re.search('/guild_img/(.*?)"',conteudo).group(1)
+  url_wowprogress_icon = "http://www.wowprogress.com/guild_img/" + id_wowprogress + "/out/type.site"
+
+  # class="innerLink ratingProgress" id="gk346_1034420"><b>6/7 (M)</b>  9/10 (H)</span>
+  progresso = re.search('ratingProgress.*?<b>(.*?)</span>',conteudo).group(1)
+  progresso = progresso.replace("</b>  ", " - ")
+  print "Progresso", progresso
+
+
+  urllib.urlretrieve(url_wowprogress_icon, 'muh_core_app/static/img/wowprogress/' + id_wowprogress+'.jpg')
+
   logging.debug("Conectando a battlenet")
   print "Conectando a battlenet..."
   guild = connection.get_guild(nome_battlegroup, nome_realm, nome_guilda, fields=[Guild.MEMBERS])
   print "Conectado!"
 
+  
+
+
 
   guilda, created = Guilda.objects.get_or_create(nome = str(guild.name),
                                                  reino = str(guild.realm),
                                                  identificador = str(guild.name) + "@" + str(guild.realm),
-                                                 defaults = {'num_membros': len(guild.members)}) 
+                                                 defaults = {'num_membros': len(guild.members),
+                                                  'wowprogress_id' : id_wowprogress,
+                                                  'progresso' : progresso}) 
 
   if not created:
-    guilda.save() 
-  else:
-    guilda.save()
+    guilda.wowprogress_id = id_wowprogress
+    guilda.progresso = progresso
 
+  guilda.save()
+  
   print "Guilda: " + str(guilda) + " inserida no banco de dados"
 
   print len(guild.members), "membros"
 
-  aux = 0
+  if not with_members:
+    continue
+
+  
   for member in guild.members:
     if member['character'].level == 100:
       nome_personagem = str(member['character'].name)
-      aux+=1 #TODO DELETAR ESSA PORRA
 
       print nome_personagem,
 

@@ -55,3 +55,5 @@ def chart_all(request, guilda_id):
 	guilda = Guilda.objects.get(pk=guilda_id)
 	membros = guilda.personagem_guilda.all()
 
+
+

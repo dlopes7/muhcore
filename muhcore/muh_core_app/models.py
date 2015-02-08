@@ -12,6 +12,8 @@ class Guilda(models.Model):
     reino = models.CharField(max_length=200)
     identificador = models.CharField(max_length=200)
     num_membros = models.IntegerField()
+    wowprogress_id = models.CharField(max_length=200)
+    progresso = models.CharField(max_length=50)
 
     def get_membros_lvl_100(self):
         return len(self.personagem_guilda.all())
