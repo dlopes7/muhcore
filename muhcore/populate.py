@@ -7,7 +7,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'muhcore.settings'
 
 
 import codecs
-import urllib
+import urllib.request
 import sys
 import battlenet
 import operator
@@ -27,13 +27,14 @@ from django.utils import timezone
 #nome_battlegroup = battlenet.UNITED_STATES
 #------------------------------------------------
 
-array_guildas = [['Paradox', 'Nemesis', battlenet.UNITED_STATES],
-                 ['Blood Fury', 'Azralon', battlenet.UNITED_STATES],
-                 ['Rise Above', 'Azralon', battlenet.UNITED_STATES],
-                 ['WICKED SICK', 'Azralon', battlenet.UNITED_STATES],
-                 ['Paragon', 'Lightning\'s Blade', battlenet.EUROPE],
-                 ['Method', 'Twisting Nether', battlenet.EUROPE],
-                 ['Avalon', 'Nemesis', battlenet.UNITED_STATES]]
+array_guildas = [#['Paradox', 'Nemesis', battlenet.UNITED_STATES],
+                 #['Blood Fury', 'Azralon', battlenet.UNITED_STATES],
+                 #['Rise Above', 'Azralon', battlenet.UNITED_STATES],
+                 #['WICKED SICK', 'Azralon', battlenet.UNITED_STATES],
+                 #['Paragon', 'Lightning\'s Blade', battlenet.EUROPE],
+                 #['Method', 'Twisting Nether', battlenet.EUROPE],
+                 #['Avalon', 'Nemesis', battlenet.UNITED_STATES],
+                 ['Defiant', 'Azralon', battlenet.UNITED_STATES]]
 
 with_members = True
 
@@ -87,33 +88,31 @@ for processar_guilda in array_guildas:
   nome_realm = processar_guilda[1]
   nome_battlegroup = processar_guilda[2]
 
-  logging.debug("Guilda: " + nome_guilda + ", Realm: " + nome_realm + " BG: " + str(nome_battlegroup))
+  print("Guilda: " + nome_guilda + ", Realm: " + nome_realm + " BG: " + str(nome_battlegroup))
 
-  print "Conectando ao WoWProgress"
+  print ("Conectando ao WoWProgress")
   url_wowprogress = "http://www.wowprogress.com/guild/"+ nome_battlegroup +"/"+ nome_realm.replace(' ', '-').replace('\'', '-') + "/" + nome_guilda
-  print url_wowprogress
-  pagina = urllib.urlopen(url_wowprogress)
-  print "Conectado!"
+  print (url_wowprogress)
+  pagina = urllib.request.urlopen(url_wowprogress)
+  print ("Conectado!")
 
-  conteudo = pagina.read()
-  id_wowprogress = re.search('/guild_img/(.*?)"',conteudo).group(1)
+  conteudo = pagina.read().decode("utf-8")
+  id_wowprogress = str(re.search('/guild_img/(.*?)"',conteudo).group(1))#.replace('\'', '')[1:]
   url_wowprogress_icon = "http://www.wowprogress.com/guild_img/" + id_wowprogress + "/out/type.site"
 
   # class="innerLink ratingProgress" id="gk346_1034420"><b>6/7 (M)</b>  9/10 (H)</span>
-  progresso = re.search('ratingProgress.*?<b>(.*?)</span>',conteudo).group(1)
-  progresso = progresso.replace("</b>  ", " - ")
-  print "Progresso", progresso
+  progresso = str(re.search('ratingProgress.*?<b>(.*?)</span>',conteudo).group(1))
+  progresso = progresso.replace("</b>", "").replace("<b>", "- ")#.replace('\'', '')[1:]
+  print ("Progresso", progresso)
 
 
-  urllib.urlretrieve(url_wowprogress_icon, 'muh_core_app/static/img/wowprogress/' + id_wowprogress+'.jpg')
+  urllib.request.urlretrieve(url_wowprogress_icon, 'muh_core_app/static/img/wowprogress/' + id_wowprogress+'.jpg')
 
   logging.debug("Conectando a battlenet")
-  print "Conectando a battlenet..."
+  print ("Conectando a battlenet...")
   guild = connection.get_guild(nome_battlegroup, nome_realm, nome_guilda, fields=[Guild.MEMBERS])
-  print "Conectado!"
-
-  
-
+  print ("Conectado!")
+  print(guild)
 
 
   guilda, created = Guilda.objects.get_or_create(nome = str(guild.name),
@@ -129,24 +128,24 @@ for processar_guilda in array_guildas:
 
   guilda.save()
   
-  print "Guilda: " + str(guilda) + " inserida no banco de dados"
+  print ("Guilda: " + str(guilda) + " inserida no banco de dados")
 
-  print len(guild.members), "membros"
+  print (len(guild.members), "membros")
 
   if not with_members:
     continue
 
   
   for member in guild.members:
-    if member['character'].level == 100:
+    if member['character'].level == 100 and member['rank'] <= 3:
       nome_personagem = str(member['character'].name)
 
-      print nome_personagem,
+      print (nome_personagem,)
 
       try: 
         membro_all = connection.get_character(nome_battlegroup, nome_realm, nome_personagem, fields=[Character.ITEMS, Character.TALENTS])
-        print membro_all.get_class_name(), membro_all.get_spec_name(), membro_all.equipment.average_item_level_equipped
-
+        print (membro_all.get_class_name(), membro_all.get_spec_name(), membro_all.equipment.average_item_level_equipped)
+          #hue
 
         membro, created = Personagem.objects.get_or_create(nome = nome_personagem,
                               identificador = str(nome_personagem) + "@" + str(guild.name),

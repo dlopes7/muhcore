@@ -27,11 +27,11 @@ class Guilda(models.Model):
     def get_menor_ilvl(self):
         return int(floor(self.personagem_guilda.all().aggregate(Min('ilvl_equipado'))['ilvl_equipado__min']))
 
-
     def __str__(self):
     	return self.nome + "@" + self.reino
 
 class Equipamento(models.Model):
+
     nome = models.CharField(max_length=200)
     slot = models.CharField(max_length=200)
     ilvl = models.IntegerField()
@@ -39,14 +39,15 @@ class Equipamento(models.Model):
     origem = models.CharField(max_length=200)
     identificador = models.CharField(max_length=300)
     wowhead_identificador = models.CharField(max_length=300)
-    def __str__(self):
-	   return self.nome
-
+    
     def get_bonus(self):
         bonus = self.bonus.replace("[", "").replace("]", "").replace(" ", "").replace(",", ":")
         return str(bonus)
 
+    def __str__(self):
+        return self.nome
 
+    
 class Personagem(models.Model):
     nome = models.CharField(max_length=200)
     ilvl_equipado = models.IntegerField()
@@ -105,3 +106,25 @@ class Historico(models.Model):
     personagem =  models.ForeignKey(Personagem, null=True, blank=True)
     ilvl_equipado = ilvl_equipado = models.IntegerField()
 
+
+class Bis(models.Model):
+    identificador = models.CharField(max_length=200)
+    classe = models.CharField(max_length=200, default='1')
+    spec = models.CharField(max_length=200, default='1')
+
+    head = models.ForeignKey(Equipamento, related_name='bis_head', null=True, blank=True)
+    shoulder = models.ForeignKey(Equipamento, related_name='bis_shoulder', null=True, blank=True)
+    neck = models.ForeignKey(Equipamento, related_name='bis_neck', null=True, blank=True)
+    back = models.ForeignKey(Equipamento, related_name='bis_back', null=True, blank=True)
+    chest = models.ForeignKey(Equipamento, related_name='bis_chest', null=True, blank=True)
+    wrist = models.ForeignKey(Equipamento, related_name='bis_wrist', null=True, blank=True)
+    hands = models.ForeignKey(Equipamento, related_name='bis_hands', null=True, blank=True)
+    waist = models.ForeignKey(Equipamento, related_name='bis_waist', null=True, blank=True)
+    legs = models.ForeignKey(Equipamento, related_name='bis_legs', null=True, blank=True)
+    feet = models.ForeignKey(Equipamento, related_name='bis_feet', null=True, blank=True)
+    finger1 = models.ForeignKey(Equipamento, related_name='bis_finger1', null=True, blank=True)
+    finger2 = models.ForeignKey(Equipamento, related_name='bis_finger2', null=True, blank=True)
+    trinket1 = models.ForeignKey(Equipamento, related_name='bis_trinket1', null=True, blank=True)
+    trinket2 = models.ForeignKey(Equipamento, related_name='bis_trinket2', null=True, blank=True)
+    main_hand = models.ForeignKey(Equipamento, related_name='bis_main_hand', null=True, blank=True)
+    off_hand = models.ForeignKey(Equipamento, related_name='bis_off_hand', null=True, blank=True)

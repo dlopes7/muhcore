@@ -103,9 +103,8 @@ class Connection(object):
         try:
             response = urllib2.urlopen(request)
             #print "Resposta", response.read()
-        except urllib2.URLError, e:
-            print e
-            raise APIError(str(e))
+        except urllib2.URLError:
+            raise APIError('e')
 
         try:
             data = json.loads(response.read())
