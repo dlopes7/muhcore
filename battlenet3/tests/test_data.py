@@ -18,21 +18,21 @@ class DataTest(unittest.TestCase):
         races = self.connection.get_character_races(battlenet.UNITED_STATES)
 
         self.assertEqual({
-            1: u'Human',
-            2: u'Orc',
-            3: u'Dwarf',
-            4: u'Night Elf',
-            5: u'Undead',
-            6: u'Tauren',
-            7: u'Gnome',
-            8: u'Troll',
-            9: u'Goblin',
-            10: u'Blood Elf',
-            11: u'Draenei',
-            22: u'Worgen',
-            24: u'Pandaren',
-            25: u'Pandaren',
-            26: u'Pandaren',
+            1: 'Human',
+            2: 'Orc',
+            3: 'Dwarf',
+            4: 'Night Elf',
+            5: 'Undead',
+            6: 'Tauren',
+            7: 'Gnome',
+            8: 'Troll',
+            9: 'Goblin',
+            10: 'Blood Elf',
+            11: 'Draenei',
+            22: 'Worgen',
+            24: 'Pandaren',
+            25: 'Pandaren',
+            26: 'Pandaren',
         }, dict([(race.id, race.name) for race in races]))
 
         for race in races:

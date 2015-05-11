@@ -11,12 +11,12 @@ except ImportError:
 class UtilsTest(unittest.TestCase):
 
     def test_quote(self):
-        for s in ('Simple', 'Sample name', u'Iso éè', u'灰谷'):
+        for s in ('Simple', 'Sample name', 'Iso éè', '灰谷'):
             new_s = utils.quote(s)
             self.assertTrue(isinstance(new_s, str))
 
     def test_normalize(self):
-        for s in ('Simple', 'Sample name', u'Iso éè', u'灰谷'):
+        for s in ('Simple', 'Sample name', 'Iso éè', '灰谷'):
             new_s = utils.normalize(s)
             self.assertTrue(isinstance(new_s, str))
 

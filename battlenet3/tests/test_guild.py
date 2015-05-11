@@ -58,12 +58,12 @@ class GuildTest(unittest.TestCase):
 
         character = guild.get_leader()
 
-        self.assertRegexpMatches(character.get_full_class_name(), r'^Balance Druid$')
+        self.assertRegex(character.get_full_class_name(), r'^Balance Druid$')
 
     def test_achievements(self):
         guild = Guild(self._guild_region, self._guild_realm_name, self._guild_name, fields=[Guild.ACHIEVEMENTS])
 
-        for id_, completed_ts in guild.achievements.items():
+        for id_, completed_ts in list(guild.achievements.items()):
             self.assertIsInstance(id_, int)
             self.assertIsInstance(completed_ts, datetime.datetime)
 

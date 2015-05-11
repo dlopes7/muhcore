@@ -40,13 +40,13 @@ if __name__ == '__main__':
         if character['character'].level != 85:
             continue
         nb_level_85 += 1
-        print character['character'].name
+        print(character['character'].name)
         try:
             for r in character['character'].progression['raids']:
-                print '\t%s (%s)' % (r.name, Raid(r.id).expansion()[0])
+                print('\t%s (%s)' % (r.name, Raid(r.id).expansion()[0]))
                 for b in r.bosses:
-                    print '\t\tN: %2d H: %2d %s' % (b.normal, b.heroic, b.name)
+                    print('\t\tN: %2d H: %2d %s' % (b.normal, b.heroic, b.name))
         except battlenet.CharacterNotFound:
-            print '\tNOT FOUND'
+            print('\tNOT FOUND')
 
-    print nb_level_85, 'characters level 85'
+    print(nb_level_85, 'characters level 85')

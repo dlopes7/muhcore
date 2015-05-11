@@ -1,20 +1,20 @@
 import unicodedata
-import urllib
+import urllib.request, urllib.parse, urllib.error
 
 
 def normalize(name):
-    if not isinstance(name, unicode):
+    if not isinstance(name, str):
         name = name.decode('utf-8')
 
     name = name.replace("'", '')
-    return unicodedata.normalize('NFKC', name).encode('utf-8')
+    return name
 
 
 def quote(name):
-    if isinstance(name, unicode):
+    if isinstance(name, str):
         name = normalize(name)
 
-    return urllib.quote(name)
+    return urllib.parse.quote(name)
 
 
 def make_icon_url(region, icon, size='large'):

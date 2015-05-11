@@ -1,12 +1,12 @@
 
 import logging
-import urllib2
-import urllib
+import urllib.request, urllib.error, urllib.parse
+import urllib.request, urllib.parse, urllib.error
 import base64
 import hmac
 import hashlib
 import time
-import urlparse
+import urllib.parse
 import re
 from .things import Character, Realm, Guild, Reward, Perk, Class, Race
 from .exceptions import APIError, CharacterNotFound, GuildNotFound, RealmNotFound
@@ -81,13 +81,13 @@ class Connection(object):
             'path': path,
             'params': '&'.join('='.join(
                 (k, ','.join(v) if isinstance(v, (set, list)) else v))
-                for k, v in params.items() if v)
+                for k, v in list(params.items()) if v)
         }
 
         if cache and url in self._cache:
             return self._cache[url]
 
-        uri = urlparse.urlparse(url)
+        uri = urllib.parse.urlparse(url)
         #print self.public_key
         if self.public_key:
             url += "&apikey=" + self.public_key
@@ -97,20 +97,20 @@ class Connection(object):
 
         logger.debug('Battle.net => ' + url)
 
-        request = urllib2.Request(url, None, headers)
+        request = urllib.request.Request(url, None, headers)
         #print request
 
         try:
-            response = urllib2.urlopen(request)
+            response = urllib.request.urlopen(request)
             #print "Resposta", response.read()
-        except urllib2.URLError:
+        except urllib.error.URLError:
             raise APIError('e')
 
         try:
-            data = json.loads(response.read())
-            #print "DATA", data
-        except urllib2.URLError, e:
-            print e
+            data = json.loads(response.read().decode("utf-8"))
+            #print ("DATA", data)
+        except urllib.error.URLError as e:
+            print(e)
                 
         else:
             if data.get('status') == 'nok':

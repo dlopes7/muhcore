@@ -154,6 +154,7 @@ class Character(LazyThing):
     def _populate_data(self, data):
         self._data = data
 
+
         self.name = normalize(data['name'])
         self.level = data['level']
         self.class_ = data['class']
@@ -189,7 +190,7 @@ class Character(LazyThing):
                 'secondary': []
             }
 
-            for type_ in professions.keys():
+            for type_ in list(professions.keys()):
                 professions[type_] = [Profession(self, profession)
                     for profession in self._data[Character.PROFESSIONS][type_]]
 
@@ -201,7 +202,7 @@ class Character(LazyThing):
     def progression(self):
         if self._refresh_if_not_present(Character.PROGRESSION):
             instances = { 'raids': [] }
-            for type_ in instances.keys():
+            for type_ in list(instances.keys()):
                 instances[type_] = [Instance(self, instance, type_) for instance in self._data[Character.PROGRESSION][type_]]
             self._progression = instances
 
@@ -486,31 +487,32 @@ class Equipment(Thing):
         super(Equipment, self).__init__(data)
 
         self._character = character
+        self.connection = character.connection
 
         self.average_item_level = data['averageItemLevel']
         self.average_item_level_equipped = data['averageItemLevelEquipped']
 
-        self.main_hand = EquippedItem(self._character.region, data['mainHand']) if data.get('mainHand') else None
-        self.off_hand = EquippedItem(self._character.region, data['offHand']) if data.get('offHand') else None
-        self.ranged = EquippedItem(self._character.region, data['ranged']) if data.get('ranged') else None
+        self.main_hand = EquippedItem(self._character.region, data['mainHand'], self._character.connection) if data.get('mainHand') else None
+        self.off_hand = EquippedItem(self._character.region, data['offHand'], self._character.connection) if data.get('offHand') else None
+        self.ranged = EquippedItem(self._character.region, data['ranged'], self._character.connection) if data.get('ranged') else None
 
-        self.head = EquippedItem(self._character.region, data['head']) if data.get('head') else None
-        self.neck = EquippedItem(self._character.region, data['neck']) if data.get('neck') else None
-        self.shoulder = EquippedItem(self._character.region, data['shoulder']) if data.get('shoulder') else None
-        self.back = EquippedItem(self._character.region, data['back']) if data.get('back') else None
-        self.chest = EquippedItem(self._character.region, data['chest']) if data.get('chest') else None
-        self.shirt = EquippedItem(self._character.region, data['shirt']) if data.get('shirt') else None
-        self.tabard = EquippedItem(self._character.region, data['tabard']) if data.get('tabard') else None
-        self.wrist = EquippedItem(self._character.region, data['wrist']) if data.get('wrist') else None
+        self.head = EquippedItem(self._character.region, data['head'], self._character.connection) if data.get('head') else None
+        self.neck = EquippedItem(self._character.region, data['neck'], self._character.connection) if data.get('neck') else None
+        self.shoulder = EquippedItem(self._character.region, data['shoulder'], self._character.connection) if data.get('shoulder') else None
+        self.back = EquippedItem(self._character.region, data['back'], self._character.connection) if data.get('back') else None
+        self.chest = EquippedItem(self._character.region, data['chest'], self._character.connection) if data.get('chest') else None
+        self.shirt = EquippedItem(self._character.region, data['shirt'], self._character.connection) if data.get('shirt') else None
+        self.tabard = EquippedItem(self._character.region, data['tabard'], self._character.connection) if data.get('tabard') else None
+        self.wrist = EquippedItem(self._character.region, data['wrist'], self._character.connection) if data.get('wrist') else None
 
-        self.hands = EquippedItem(self._character.region, data['hands']) if data.get('hands') else None
-        self.waist = EquippedItem(self._character.region, data['waist']) if data.get('waist') else None
-        self.legs = EquippedItem(self._character.region, data['legs']) if data.get('legs') else None
-        self.feet = EquippedItem(self._character.region, data['feet']) if data.get('feet') else None
-        self.finger1 = EquippedItem(self._character.region, data['finger1']) if data.get('finger1') else None
-        self.finger2 = EquippedItem(self._character.region, data['finger2']) if data.get('finger2') else None
-        self.trinket1 = EquippedItem(self._character.region, data['trinket1']) if data.get('trinket1') else None
-        self.trinket2 = EquippedItem(self._character.region, data['trinket2']) if data.get('trinket2') else None
+        self.hands = EquippedItem(self._character.region, data['hands'], self._character.connection) if data.get('hands') else None
+        self.waist = EquippedItem(self._character.region, data['waist'], self._character.connection) if data.get('waist') else None
+        self.legs = EquippedItem(self._character.region, data['legs'], self._character.connection) if data.get('legs') else None
+        self.feet = EquippedItem(self._character.region, data['feet'], self._character.connection) if data.get('feet') else None
+        self.finger1 = EquippedItem(self._character.region, data['finger1'], self._character.connection) if data.get('finger1') else None
+        self.finger2 = EquippedItem(self._character.region, data['finger2'], self._character.connection) if data.get('finger2') else None
+        self.trinket1 = EquippedItem(self._character.region, data['trinket1'], self._character.connection) if data.get('trinket1') else None
+        self.trinket2 = EquippedItem(self._character.region, data['trinket2'], self._character.connection) if data.get('trinket2') else None
 
     def __getitem__(self, item):
         try:
@@ -690,6 +692,8 @@ class Guild(LazyThing):
             data['realm'] = self._data['realm']  # Copy over realm since API does not provide it!
 
         self._data = data
+       # print (data['name'])
+       # print (normalize(data['name']))
 
         self.name = normalize(data['name'])
         self.emblem = Emblem(data['emblem']) if 'emblem' in data else None
@@ -888,10 +892,19 @@ class Realm(Thing):
 
 
 class EquippedItem(Thing):
-    def __init__(self, region, data):
+    def __init__(self, region, data, connection=None):
         super(EquippedItem, self).__init__(data)
 
+        slots = {0: 'None',1: 'Head',2: 'Neck',3: 'Shoulder',4: 'Shirt',5: 'Chest',
+                 6: 'Waist',7: 'Legs',8: 'Feet',9: 'Wrist',10: 'Hands',11: 'Finger',
+                 12: 'Trinket',13: 'One-Hand',14: 'Shield',15: 'Ranged',16: 'Cloak',
+                 17: 'Two-Hand',18: 'Bag',19: 'Tabard',20: 'Robe',21: 'Main Hand',
+                 22: 'Off Hand',23: 'Held In Off-hand',24: 'Ammo',25: 'Thrown',
+                 26: 'Ranged Right',28: 'Relic'}
+
         self._region = region
+
+        self.connection = connection or make_connection()
 
         self.id = data['id']
         self.name = data['name']
@@ -902,16 +915,26 @@ class EquippedItem(Thing):
         self.bonus = data['bonusLists'] #Adicionado por David Lopes
         self.context = data['context'] #Adicionado por David Lopes
 
-        self.reforge = data['tooltipParams'].get('reforge')
-        self.set = data['tooltipParams'].get('set')
-        self.enchant = data['tooltipParams'].get('enchant')
-        self.extra_socket = data['tooltipParams'].get('extraSocket', False)
+        #The next part is needed because the Character.ITEMS that comes with the Guild API 
+        #does not return full item description, we need the slot info.
+        try:
+            self.slot = slots[data['inventoryType']]
+        except KeyError:
+            print ('inventoryType not found, getting the full item from battlenet:', self.id, self.name)
+            full_item = self.connection.get_item(region, self.id)
+            self.slot = slots[full_item['inventoryType']]
+        
 
-        self.gems = collections.defaultdict(lambda: None)
+        #self.reforge = data['tooltipParams'].get('reforge')
+        #self.set = data['tooltipParams'].get('set')
+        #self.enchant = data['tooltipParams'].get('enchant')
+        #self.extra_socket = data['tooltipParams'].get('extraSocket', False)
 
-        for key, value in data['tooltipParams'].items():
-            if key.startswith('gem'):
-                self.gems[int(key[3:])] = value
+        #self.gems = collections.defaultdict(lambda: None)
+
+        #for key, value in list(data['tooltipParams'].items()):
+        #    if key.startswith('gem'):
+        #        self.gems[int(key[3:])] = value
 
     def __str__(self):
         return self.name
@@ -961,9 +984,9 @@ class Raid(Thing):
         self.id = id
 
     def expansion(self):
-        for exp, ids in RAIDS.items():
+        for exp, ids in list(RAIDS.items()):
             if self.id in ids:
-                for e in EXPANSION.keys():
+                for e in list(EXPANSION.keys()):
                     if EXPANSION[e][0] == exp:
                         return exp, EXPANSION[e][1]
         return (None, None)
