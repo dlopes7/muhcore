@@ -38,7 +38,7 @@ array_guildas = [#['Paradox', 'Nemesis', battlenet.UNITED_STATES],
 
 with_members = True
 
-def criarEquipamento(equipamento, slot):
+def criarEquipamento(equipamento):
   if (equipamento != None):
     bonus_id = str(equipamento.bonus).replace("[", "").replace("]", "").replace(" ", "").replace(",", "")
 
@@ -48,11 +48,11 @@ def criarEquipamento(equipamento, slot):
                                                         'ilvl': int(equipamento.ilvl),
                                                         'bonus' :  equipamento.bonus,
                                                         'wowhead_identificador': equipamento.id,
-                                                        'slot': slot,
+                                                        'slot': equipamento.slot,
                                                         'origem': equipamento.context})
 
     equip_criado.save()
-      #print equip_criado.origem  
+      #print equip_criado.origem 
     #print equip_criado.wowhead_identificador, equipamento.id
       #print equip_criado.get_bonus()
     return equip_criado
@@ -137,7 +137,7 @@ for processar_guilda in array_guildas:
 
   
   for member in guild.members:
-    if member['character'].level == 100 and member['rank'] <= 3:
+    if member['character'].level == 100 and member['rank'] <= 3 and member['character'].name=='Gordonfreema':
       nome_personagem = str(member['character'].name)
 
       print (nome_personagem,)
@@ -145,7 +145,7 @@ for processar_guilda in array_guildas:
       try: 
         membro_all = connection.get_character(nome_battlegroup, nome_realm, nome_personagem, fields=[Character.ITEMS, Character.TALENTS])
         print (membro_all.get_class_name(), membro_all.get_spec_name(), membro_all.equipment.average_item_level_equipped)
-          #hue
+          #hue 
 
         membro, created = Personagem.objects.get_or_create(nome = nome_personagem,
                               identificador = str(nome_personagem) + "@" + str(guild.name),
@@ -156,22 +156,22 @@ for processar_guilda in array_guildas:
                                         'icon_spec' : membro_all.get_spec_icon(),
                                         'avatar' : membro_all.get_thumbnail_url(),
                                         'guilda' : guilda,
-                                        'head' : criarEquipamento(membro_all.equipment.head, 'head'),
-                                        'shoulder' : criarEquipamento(membro_all.equipment.shoulder, 'shoulder'),
-                                        'neck' : criarEquipamento(membro_all.equipment.shoulder, 'neck'),
-                                        'back' : criarEquipamento(membro_all.equipment.back, 'back'),
-                                        'chest': criarEquipamento(membro_all.equipment.chest, 'chest'),
-                                        'wrist' : criarEquipamento(membro_all.equipment.wrist, 'wrist'),
-                                        'hands' : criarEquipamento(membro_all.equipment.hands , 'hands'),
-                                        'waist' : criarEquipamento(membro_all.equipment.waist, 'waist'),
-                                        'legs' : criarEquipamento(membro_all.equipment.legs, 'legs'),
-                                        'feet' : criarEquipamento(membro_all.equipment.feet, 'feet'),
-                                        'finger1' : criarEquipamento(membro_all.equipment.finger1, 'finger1'),
-                                        'finger2' :  criarEquipamento(membro_all.equipment.finger2, 'finger2'),
-                                        'trinket1' : criarEquipamento(membro_all.equipment.trinket1, 'trinket1'),
-                                        'trinket2' : criarEquipamento(membro_all.equipment.trinket2, 'trinket2'),
-                                        'main_hand' : criarEquipamento(membro_all.equipment.main_hand, 'main_hand'),
-                                        'off_hand' : criarEquipamento(membro_all.equipment.off_hand, 'off_hand')})
+                                        'head' : criarEquipamento(membro_all.equipment.head),
+                                        'shoulder' : criarEquipamento(membro_all.equipment.shoulder,),
+                                        'neck' : criarEquipamento(membro_all.equipment.shoulder),
+                                        'back' : criarEquipamento(membro_all.equipment.back),
+                                        'chest': criarEquipamento(membro_all.equipment.chest),
+                                        'wrist' : criarEquipamento(membro_all.equipment.wrist),
+                                        'hands' : criarEquipamento(membro_all.equipment.hands),
+                                        'waist' : criarEquipamento(membro_all.equipment.waist),
+                                        'legs' : criarEquipamento(membro_all.equipment.legs),
+                                        'feet' : criarEquipamento(membro_all.equipment.feet),
+                                        'finger1' : criarEquipamento(membro_all.equipment.finger1),
+                                        'finger2' :  criarEquipamento(membro_all.equipment.finger2),
+                                        'trinket1' : criarEquipamento(membro_all.equipment.trinket1),
+                                        'trinket2' : criarEquipamento(membro_all.equipment.trinket2),
+                                        'main_hand' : criarEquipamento(membro_all.equipment.main_hand),
+                                        'off_hand' : criarEquipamento(membro_all.equipment.off_hand)})
       
         if not created:
           #print 'OPA ja existe', membro.ilvl_equipado, 
@@ -181,22 +181,22 @@ for processar_guilda in array_guildas:
           membro.icon_spec = membro_all.get_spec_icon()
           membro.avatar = membro_all.get_thumbnail_url()
           membro.guilda = guilda
-          membro.head = criarEquipamento(membro_all.equipment.head, 'head')
-          membro.shoulder = criarEquipamento(membro_all.equipment.shoulder, 'shoulder')
-          membro.neck = criarEquipamento(membro_all.equipment.shoulder, 'neck')
-          membro.back = criarEquipamento(membro_all.equipment.back, 'back')
-          membro.chest = criarEquipamento(membro_all.equipment.chest, 'chest')
-          membro.wrist = criarEquipamento(membro_all.equipment.wrist, 'wrist')
-          membro.hands = criarEquipamento(membro_all.equipment.hands , 'hands')
-          membro.waist = criarEquipamento(membro_all.equipment.waist, 'waist')
-          membro.legs = criarEquipamento(membro_all.equipment.legs, 'legs')
-          membro.feet = criarEquipamento(membro_all.equipment.feet, 'feet')
-          membro.finger1 = criarEquipamento(membro_all.equipment.finger1, 'finger1')
-          membro.finger2 =criarEquipamento(membro_all.equipment.finger2, 'finger2')
-          membro.trinket1 = criarEquipamento(membro_all.equipment.trinket1, 'trinket1')
-          membro.trinket2 = criarEquipamento(membro_all.equipment.trinket2, 'trinket2')
-          membro.main_hand = criarEquipamento(membro_all.equipment.main_hand, 'main_hand')
-          membro.off_hand = criarEquipamento(membro_all.equipment.off_hand, 'off_hand')
+          membro.head = criarEquipamento(membro_all.equipment.head)
+          membro.shoulder = criarEquipamento(membro_all.equipment.shoulder)
+          membro.neck = criarEquipamento(membro_all.equipment.shoulder)
+          membro.back = criarEquipamento(membro_all.equipment.back)
+          membro.chest = criarEquipamento(membro_all.equipment.chest)
+          membro.wrist = criarEquipamento(membro_all.equipment.wrist)
+          membro.hands = criarEquipamento(membro_all.equipment.hands)
+          membro.waist = criarEquipamento(membro_all.equipment.waist)
+          membro.legs = criarEquipamento(membro_all.equipment.legs)
+          membro.feet = criarEquipamento(membro_all.equipment.feet)
+          membro.finger1 = criarEquipamento(membro_all.equipment.finger1)
+          membro.finger2 =criarEquipamento(membro_all.equipment.finger2)
+          membro.trinket1 = criarEquipamento(membro_all.equipment.trinket1)
+          membro.trinket2 = criarEquipamento(membro_all.equipment.trinket2)
+          membro.main_hand = criarEquipamento(membro_all.equipment.main_hand)
+          membro.off_hand = criarEquipamento(membro_all.equipment.off_hand)
           #print membro.ilvl_equipado
 
         #print membro, created
