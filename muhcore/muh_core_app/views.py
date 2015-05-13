@@ -5,6 +5,8 @@ import json
 # Create your views here.
 from muh_core_app.models import Guilda, Personagem, Historico
 
+def home(request):
+	return render(request, 'muh_core_app/home.html')
 
 def index(request):
     lista_guildas = Guilda.objects.order_by('nome')

@@ -18,8 +18,8 @@ import re
 
 from collections import Counter
 
-from battlenet import Connection, Character, Guild, EquippedItem
-from muh_core_app.models import Personagem, Guilda, Equipamento, Historico
+from battlenet import Connection, EquippedItem
+from muh_core_app.models import Personagem, Guilda, Equipamento, Historico, Bis
 from django.utils import timezone
 
 
@@ -51,9 +51,25 @@ def criarEquipamento(equipamento_id):
   else:
     return None
 
-def criarBis(lista_bis):
+def criarBis(classe, spec, lista_bis):
+  print ('Criando BIS para ', classe, spec)
   if (lista_bis != None ):
-    print('oi')
+    try:
+      bis_atual = Bis.objects.get(identificador=(classe) + " - " + (spec))
+      print ('BIS para ', classe, spec, 'já existe, alterando items')
+    except Bis.DoesNotExist:
+      print ('BIS para ', classe, spec, 'ainda não existe, criando items')
+      bis_atual = Bis.objects.create(identificador = (classe) + " - " + (spec),
+                                      classe = classe,
+                                      spec = spec)
+      bis_atual.save()
+
+    for bis_id in lista_bis:
+      equipamento = Equipamento.objects.get(identificador=bis_id)
+      bis_atual.add_equipment(equipamento)
+    bis_atual.save()
+
+      
 
 
 django.setup()
@@ -101,7 +117,8 @@ region = battlenet.UNITED_STATES
 for classe, specs in classes.items():
   for spec in specs:
     print (classe, spec)
-    bis_spec = bis_list[classe + ' - ' + spec]
-    for bis in bis_spec:
-      equip_exists = criarEquipamento(bis)
-      print (equip_exists)
+    bis_spec_list = bis_list[classe + ' - ' + spec]
+    for equipamento_id in bis_spec_list:
+      equip_exists = criarEquipamento(equipamento_id)
+    criarBis(classe, spec, bis_spec_list)
+    print()

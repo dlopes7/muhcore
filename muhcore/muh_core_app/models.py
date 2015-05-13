@@ -128,3 +128,56 @@ class Bis(models.Model):
     trinket2 = models.ForeignKey(Equipamento, related_name='bis_trinket2', null=True, blank=True)
     main_hand = models.ForeignKey(Equipamento, related_name='bis_main_hand', null=True, blank=True)
     off_hand = models.ForeignKey(Equipamento, related_name='bis_off_hand', null=True, blank=True)
+
+    def add_equipment(self, equipamento):
+        slot = equipamento.slot
+        if slot == 'One-Hand':
+            self.main_hand = equipamento
+
+        elif slot == 'Held In Off-hand':
+            self.off_hand = equipamento
+
+        elif slot == 'Head':
+            self.head = equipamento
+
+        elif slot == 'Neck':
+            self.neck = equipamento
+
+        elif slot == 'Shoulder':
+            self.shoulder = equipamento
+
+        elif slot == 'Cloak':
+            self.cloak = equipamento
+
+        elif slot == 'Robe':
+            self.chest = equipamento
+
+        elif slot == 'Wrist':
+            self.wrist = equipamento
+
+        elif slot == 'Hands':
+            self.hands = equipamento
+
+        elif slot == 'Waist':
+            self.waist = equipamento
+
+        elif slot == 'Legs':
+            self.legs = equipamento
+
+        elif slot == 'Feet':
+            self.feet = equipamento
+
+        elif slot == 'Finger':
+            if self.finger1 == None and self.finger1 != equipamento:
+                self.finger1 = equipamento
+            if self.finger2 != self.finger1 and self.finger1 != equipamento:
+                self.finger2 = equipamento
+
+        elif slot == 'Trinket':
+            if self.trinket1 == None and self.trinket1 != equipamento:
+                self.trinket1 = equipamento
+            if self.trinket2 != self.trinket1 and self.trinket1 != equipamento:
+                self.trinket2 = equipamento
+
+        else:
+            return 'Item: ' + equipamento.nome + ', slot: ' + equipamento.slot + ' não foi inserido na BIS!'
