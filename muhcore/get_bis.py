@@ -66,6 +66,7 @@ def criarBis(classe, spec, lista_bis):
 
     for bis_id in lista_bis:
       equipamento = Equipamento.objects.get(identificador=bis_id)
+      #print (equipamento.slot)
       bis_atual.add_equipment(equipamento)
     bis_atual.save()
 

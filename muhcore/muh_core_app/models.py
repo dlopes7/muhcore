@@ -180,4 +180,4 @@ class Bis(models.Model):
                 self.trinket2 = equipamento
 
         else:
-            return 'Item: ' + equipamento.nome + ', slot: ' + equipamento.slot + ' não foi inserido na BIS!'
+            return 'Item: ' + equipamento.nome + ', slot: ' + equipamento.slot + ' nao foi inserido na BIS!'
