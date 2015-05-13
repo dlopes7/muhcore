@@ -137,7 +137,7 @@ for processar_guilda in array_guildas:
 
   
   for member in guild.members:
-    if member['character'].level == 100 and member['rank'] <= 3 and member['character'].name=='Gordonfreema':
+    if member['character'].level == 100 and member['rank'] <= 3:
       nome_personagem = str(member['character'].name)
 
       print (nome_personagem,)
