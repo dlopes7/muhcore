@@ -104,24 +104,38 @@ class Personagem(models.Model):
         #return historico.ilvl_equipado
 
     def get_all_items_wowhead_id(self):
-        return set([self.head.wowhead_identificador,  self.shoulder.wowhead_identificador,
-                    self.neck.wowhead_identificador,  self.back.wowhead_identificador,
-                    self.chest.wowhead_identificador,  self.wrist.wowhead_identificador,
-                    self.hands.wowhead_identificador,  self.waist.wowhead_identificador,
-                    self.legs.wowhead_identificador,  self.feet.wowhead_identificador,
-                    self.finger1.wowhead_identificador,  self.finger2.wowhead_identificador,
-                    self.trinket1.wowhead_identificador,  self.trinket2.wowhead_identificador,
-                    self.main_hand.wowhead_identificador,  self.off_hand.wowhead_identificador])
+        bis_ilvl = 700
+
+        return set([self.head.wowhead_identificador if self.head != None and self.head.ilvl >= bis_ilvl else None,
+                    self.shoulder.wowhead_identificador if self.shoulder != None and self.shoulder.ilvl >= bis_ilvl else None,
+                    self.neck.wowhead_identificador if self.neck != None and self.neck.ilvl >= bis_ilvl else None,
+                    self.back.wowhead_identificador if self.back != None and self.back.ilvl >= bis_ilvl else None,
+                    self.chest.wowhead_identificador if self.chest != None and self.chest.ilvl >= bis_ilvl else None,
+                    self.wrist.wowhead_identificador if self.wrist != None and self.wrist.ilvl >= bis_ilvl else None,
+                    self.hands.wowhead_identificador if self.hands != None and self.hands.ilvl >= bis_ilvl else None,
+                    self.waist.wowhead_identificador if self.waist != None and self.waist.ilvl >= bis_ilvl else None,
+                    self.legs.wowhead_identificador if self.legs != None and self.legs.ilvl >= bis_ilvl else None,
+                    self.feet.wowhead_identificador if self.feet != None and self.feet.ilvl >= bis_ilvl else None,
+                    self.finger1.wowhead_identificador if self.finger1 != None and self.finger1.ilvl >= bis_ilvl else None,
+                    self.finger2.wowhead_identificador if self.finger2 != None and self.finger2.ilvl >= bis_ilvl else None,
+                    self.trinket1.wowhead_identificador if self.trinket1 != None and self.trinket1.ilvl >= bis_ilvl else None,
+                    self.trinket2.wowhead_identificador if self.trinket2 != None and self.trinket2.ilvl >= bis_ilvl else None,
+                    self.main_hand.wowhead_identificador if self.main_hand != None and self.main_hand.ilvl >= bis_ilvl else None,
+                    self.off_hand.wowhead_identificador if self.off_hand != None and self.off_hand.ilvl >= bis_ilvl else None])
     
-    def compare_bis(self):
+    def get_bis_equipped(self):
         bis = Bis.objects.get(classe = self.classe, spec = self.spec)
         meus_items =  self.get_all_items_wowhead_id()
         meu_bis = bis.get_all_items_wowhead_id()
 
-        print ('items', meus_items)
-        print ('bis', meu_bis)
         return (meus_items & meu_bis)
 
+    def get_bis_missing(self):
+        bis = Bis.objects.get(classe = self.classe, spec = self.spec)
+        meus_items =  self.get_all_items_wowhead_id()
+        meu_bis = bis.get_all_items_wowhead_id()
+
+        return [item for item in meu_bis if item not in meus_items]
 
 
 class Historico(models.Model):
@@ -156,14 +170,22 @@ class Bis(models.Model):
     off_hand = models.ForeignKey(Equipamento, related_name='bis_off_hand', null=True, blank=True)
 
     def get_all_items_wowhead_id(self):
-        return set([self.head.identificador,  self.shoulder.identificador,
-                    self.neck.identificador,  self.back.identificador,
-                    self.chest.identificador,  self.wrist.identificador,
-                    self.hands.identificador,  self.waist.identificador,
-                    self.legs.identificador,  self.feet.identificador,
-                    self.finger1.identificador,  self.finger2.identificador,
-                    self.trinket1.identificador,  self.trinket2.identificador,
-                    self.main_hand.identificador,  self.off_hand.identificador])
+        return set([self.head.identificador if self.head != None else None,
+                    self.shoulder.identificador if self.shoulder != None else None,
+                    self.neck.identificador if self.neck != None else None,
+                    self.back.identificador if self.back != None else None,
+                    self.chest.identificador if self.chest != None else None,
+                    self.wrist.identificador if self.wrist != None else None,
+                    self.hands.identificador if self.hands != None else None,
+                    self.waist.identificador if self.waist != None else None,
+                    self.legs.identificador if self.legs != None else None,
+                    self.feet.identificador if self.feet != None else None,
+                    self.finger1.identificador if self.finger1 != None else None,
+                    self.finger2.identificador if self.finger2 != None else None,
+                    self.trinket1.identificador if self.trinket1 != None else None,
+                    self.trinket2.identificador if self.trinket2 != None else None,
+                    self.main_hand.identificador if self.main_hand != None else None,
+                    self.off_hand.identificador if self.off_hand != None else None])
 
     def add_equipment(self, equipamento):
         slot = equipamento.slot

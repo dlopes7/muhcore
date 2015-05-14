@@ -191,7 +191,7 @@ for processar_guilda in array_guildas:
                                         'guilda' : guilda,
                                         'head' : criarEquipamento(membro_all.equipment.head),
                                         'shoulder' : criarEquipamento(membro_all.equipment.shoulder),
-                                        'neck' : criarEquipamento(membro_all.equipment.shoulder),
+                                        'neck' : criarEquipamento(membro_all.equipment.neck),
                                         'back' : criarEquipamento(membro_all.equipment.back),
                                         'chest': criarEquipamento(membro_all.equipment.chest),
                                         'wrist' : criarEquipamento(membro_all.equipment.wrist),
@@ -216,7 +216,7 @@ for processar_guilda in array_guildas:
           membro.guilda = guilda
           membro.head = criarEquipamento(membro_all.equipment.head)
           membro.shoulder = criarEquipamento(membro_all.equipment.shoulder)
-          membro.neck = criarEquipamento(membro_all.equipment.shoulder)
+          membro.neck = criarEquipamento(membro_all.equipment.neck)
           membro.back = criarEquipamento(membro_all.equipment.back)
           membro.chest = criarEquipamento(membro_all.equipment.chest)
           membro.wrist = criarEquipamento(membro_all.equipment.wrist)

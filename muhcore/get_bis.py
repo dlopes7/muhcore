@@ -83,7 +83,7 @@ classes = {#'Death Knight':{'Blood', 'Unholy', 'Frost'}}
           #'Druid':{'Blood', 'Unholy', 'Frost'},
           #'Hunter':{'Blood', 'Unholy', 'Frost'},
           #'Mage':{'Blood', 'Unholy', 'Frost'},
-          'Monk':['Windwalker'],
+          'Monk':['Windwalker', 'Mistweaver'],
           'Paladin':['Holy'],
           'Priest':['Discipline'],
           #'Rogue':{'Blood', 'Unholy', 'Frost'},
@@ -104,7 +104,10 @@ bis_list = {'Shaman - Elemental'  : [113904, 113960, 115579, 113872, 115576, 120
                                      115562, 113941, 115564, 113942, 113901, 118309, 113889, 113986],
 
             'Monk - Windwalker':    [113865, 113870, 113877, 113895, 113931, 113939, 113964, 113971,
-                                     113985, 115555, 115556, 115557, 115559, 119333]}
+                                     113985, 115555, 115556, 115557, 115559, 119333, 118307],
+
+            'Monk - Mistweaver':    [113870,113878,113889,113895,113932,113957,113960,113964,113973,
+                                     115555,115556,115557,115559,118309,119192,119333]}
 
 
 with_members = True
