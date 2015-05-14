@@ -913,6 +913,7 @@ class EquippedItem(Thing):
         self.ilvl = data['itemLevel'] #Adicionado por David Lopes
         self.bonus = data['bonusLists'] #Adicionado por David Lopes
         self.context = data['context'] #Adicionado por David Lopes
+        #print (data['itemSource'])
 
         #The next part is needed because the Character.ITEMS that comes with the Guild API 
         #does not return full item description, we need the slot info.

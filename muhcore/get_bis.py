@@ -73,7 +73,7 @@ def criarBis(classe, spec, lista_bis):
     for bis_id in lista_bis:
       equipamento = Equipamento.objects.get(identificador=bis_id)
       bis_atual.add_equipment(equipamento)
-      print (str(equipamento.identificador) + ' - ' + equipamento.nome)
+      print (str(equipamento.identificador) + ' - ' + str(equipamento.nome))
     bis_atual.save()
 
 django.setup()
@@ -83,9 +83,9 @@ classes = {#'Death Knight':{'Blood', 'Unholy', 'Frost'}}
           #'Druid':{'Blood', 'Unholy', 'Frost'},
           #'Hunter':{'Blood', 'Unholy', 'Frost'},
           #'Mage':{'Blood', 'Unholy', 'Frost'},
-          'Monk':['Windwalker', 'Mistweaver'],
-          'Paladin':['Holy'],
-          'Priest':['Discipline'],
+          #'Monk':['Windwalker', 'Mistweaver'],
+          #'Paladin':['Holy'],
+          #'Priest':['Discipline'],
           #'Rogue':{'Blood', 'Unholy', 'Frost'},
           'Shaman':['Enhancement', 'Elemental']}
           #'Warlock':{'Blood', 'Unholy', 'Frost'},
