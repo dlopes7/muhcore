@@ -87,8 +87,8 @@ def criarBis(classe, spec, lista_bis):
       bis_atual.save()
 
     for bis_id in lista_bis:
+      print (bis_id)
       equipamento = Equipamento.objects.get(identificador=bis_id)
-      #print (equipamento.slot)
       bis_atual.add_equipment(equipamento)
     bis_atual.save()
 
@@ -146,5 +146,8 @@ for classe, specs in classes.items():
     bis_spec_list = bis_list[classe + ' - ' + spec]
     for equipamento_id in bis_spec_list:
       equip_exists = criarEquipamento(equipamento_id)
+
     criarBis(classe, spec, bis_spec_list)
     print()
+
+#TODO alguns equipamentos estao com slot = None
