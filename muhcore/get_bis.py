@@ -6,26 +6,12 @@ os.environ['PYTHONPATH'] = '/home/david/Documents/projeto/muhcore'
 os.environ['DJANGO_SETTINGS_MODULE'] = 'muhcore.settings'
 
 
-import codecs
-import urllib.request
-import sys
 import battlenet
-import operator
-import logging
 import django
-import re
-
-
-from collections import Counter
 
 from battlenet import Connection, EquippedItem
-from muh_core_app.models import Personagem, Guilda, Equipamento, Historico, Bis, Boss
-from django.utils import timezone
+from muh_core_app.models import Equipamento, Bis, Boss
 from wowheadhelper import get_item_source
-
-
-
-with_members = True
 
 def get_boss(boss_nome):
   
@@ -37,8 +23,6 @@ def get_boss(boss_nome):
   except Boss.DoesNotExist:
     boss_exists = Boss.objects.create(nome = boss_nome)
   return boss_exists
-
-
 
 def criarEquipamento(equipamento_id): 
   if (equipamento_id != None):
@@ -87,40 +71,25 @@ def criarBis(classe, spec, lista_bis):
       bis_atual.save()
 
     for bis_id in lista_bis:
-      print (bis_id)
       equipamento = Equipamento.objects.get(identificador=bis_id)
       bis_atual.add_equipment(equipamento)
+      print (str(equipamento.identificador) + ' - ' + equipamento.nome)
     bis_atual.save()
 
 django.setup()
-
-logging.basicConfig(filename='../../processo.log',level=logging.DEBUG, format='%(asctime)s %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
-
 connection = battlenet.Connection(public_key='nm3jrgp8avwjpqnptby38z763t9afyes', private_key='Edt6pnruq8ntrE4YnwnBX4ckBnMddbf8', locale='en')
 
 classes = {#'Death Knight':{'Blood', 'Unholy', 'Frost'}}
           #'Druid':{'Blood', 'Unholy', 'Frost'},
           #'Hunter':{'Blood', 'Unholy', 'Frost'},
           #'Mage':{'Blood', 'Unholy', 'Frost'},
-          #'Monk':{'Blood', 'Unholy', 'Frost'},
+          'Monk':['Windwalker'],
           'Paladin':['Holy'],
-          #'Priest':{'Blood', 'Unholy', 'Frost'},
+          'Priest':['Discipline'],
           #'Rogue':{'Blood', 'Unholy', 'Frost'},
           'Shaman':['Enhancement', 'Elemental']}
           #'Warlock':{'Blood', 'Unholy', 'Frost'},
           #'Warrior':{'Blood', 'Unholy', 'Frost'}
-
-colors = {'Death Knight':'#C41F3B',
-          'Druid':'#FF7D0A',
-          'Hunter':'#ABD473',
-          'Mage':'#69CCF0',
-          'Monk':'#00FF96',
-          'Paladin':'#F58CBA',
-          'Priest':'#FFFFFF',
-          'Rogue':'#FFF569',
-          'Shaman':'#0070DE',
-          'Warlock':'#9482C9',
-          'Warrior':'#C79C6E'}
 
 bis_list = {'Shaman - Elemental'  : [113904, 113960, 115579, 113872, 115576, 120078, 115577, 113968,
                                      115578, 113955, 113944, 113954, 113975, 118306, 113948, 113984],
@@ -129,21 +98,24 @@ bis_list = {'Shaman - Elemental'  : [113904, 113960, 115579, 113872, 115576, 120
                                      118307, 113877, 113931, 118114, 115579, 115576, 115577, 115578],
 
             'Paladin - Holy':       [113934, 113946, 115568, 113890, 115565, 113878, 115566, 113896,
-                                     113906, 113976, 115569, 119341, 113957, 118309, 113986, 119194]}
+                                     113906, 113976, 115569, 119341, 113957, 118309, 113986, 119194],
+
+            'Priest - Discipline':  [113904, 113960, 113981, 113890, 115561, 113945, 115560, 113887,
+                                     115562, 113941, 115564, 113942, 113901, 118309, 113889, 113986],
+
+            'Monk - Windwalker':    [113865, 113870, 113877, 113895, 113931, 113939, 113964, 113971,
+                                     113985, 115555, 115556, 115557, 115559, 119333]}
 
 
-
-
-
-
+with_members = True
 region = battlenet.UNITED_STATES
- ## http://imgur.com/InLkJUj
 
 
 for classe, specs in classes.items():
   for spec in specs:
     print (classe, spec)
     bis_spec_list = bis_list[classe + ' - ' + spec]
+
     for equipamento_id in bis_spec_list:
       equip_exists = criarEquipamento(equipamento_id)
 

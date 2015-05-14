@@ -103,6 +103,26 @@ class Personagem(models.Model):
         return sinal + str(abs(self.ilvl_equipado - historico.ilvl_equipado))
         #return historico.ilvl_equipado
 
+    def get_all_items_wowhead_id(self):
+        return set([self.head.wowhead_identificador,  self.shoulder.wowhead_identificador,
+                    self.neck.wowhead_identificador,  self.back.wowhead_identificador,
+                    self.chest.wowhead_identificador,  self.wrist.wowhead_identificador,
+                    self.hands.wowhead_identificador,  self.waist.wowhead_identificador,
+                    self.legs.wowhead_identificador,  self.feet.wowhead_identificador,
+                    self.finger1.wowhead_identificador,  self.finger2.wowhead_identificador,
+                    self.trinket1.wowhead_identificador,  self.trinket2.wowhead_identificador,
+                    self.main_hand.wowhead_identificador,  self.off_hand.wowhead_identificador])
+    
+    def compare_bis(self):
+        bis = Bis.objects.get(classe = self.classe, spec = self.spec)
+        meus_items =  self.get_all_items_wowhead_id()
+        meu_bis = bis.get_all_items_wowhead_id()
+
+        print ('items', meus_items)
+        print ('bis', meu_bis)
+        return (meus_items & meu_bis)
+
+
 
 class Historico(models.Model):
     
@@ -135,9 +155,19 @@ class Bis(models.Model):
     main_hand = models.ForeignKey(Equipamento, related_name='bis_main_hand', null=True, blank=True)
     off_hand = models.ForeignKey(Equipamento, related_name='bis_off_hand', null=True, blank=True)
 
+    def get_all_items_wowhead_id(self):
+        return set([self.head.identificador,  self.shoulder.identificador,
+                    self.neck.identificador,  self.back.identificador,
+                    self.chest.identificador,  self.wrist.identificador,
+                    self.hands.identificador,  self.waist.identificador,
+                    self.legs.identificador,  self.feet.identificador,
+                    self.finger1.identificador,  self.finger2.identificador,
+                    self.trinket1.identificador,  self.trinket2.identificador,
+                    self.main_hand.identificador,  self.off_hand.identificador])
+
     def add_equipment(self, equipamento):
         slot = equipamento.slot
-        if slot == 'One-Hand':
+        if slot == 'One-Hand' or slot == 'Two-Hand':
             self.main_hand = equipamento
 
         elif slot == 'Held In Off-hand' or slot == 'Shield':
