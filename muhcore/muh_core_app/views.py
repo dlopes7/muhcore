@@ -3,7 +3,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import json
 
 # Create your views here.
-from muh_core_app.models import Guilda, Personagem, Historico, Bis
+from muh_core_app.models import Guilda, Personagem, Historico, Bis, Boss, Equipamento
 
 def home(request):
 	return render(request, 'muh_core_app/home.html')
@@ -54,6 +54,32 @@ def bis_list(request):
 		lista_bis = paginator.page(paginator.num_pages)
 
 	return render_to_response('muh_core_app/bis.html', {"lista_bis": lista_bis})
+
+def bosses(request):
+
+	bosses = Boss.objects.all()
+	boss_equips = {}
+
+	for boss in bosses:
+		#Todos os equips que dropam do boss X
+		boss_equips[boss.nome] = Equipamento.objects.filter(dropped_by=boss)
+
+
+	#Apenas os top X membros
+	paginator = Paginator(bosses, 20)
+
+	page = request.GET.get('page')
+
+	try:
+		lista_bosses = paginator.page(page)
+	except PageNotAnInteger:
+ 		# If page is not an integer, deliver first page.
+		lista_bosses = paginator.page(1)
+	except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+		lista_bosses = paginator.page(paginator.num_pages)
+
+	return render_to_response('muh_core_app/bosses.html', {"bosses": lista_bosses, "boss_equips": boss_equips})
 
 def personagem(request, personagem_id):
 	personagem = Personagem.objects.get(pk=personagem_id)

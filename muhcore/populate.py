@@ -39,6 +39,7 @@ array_guildas = [#['Paradox', 'Nemesis', battlenet.UNITED_STATES],
                  ['Defiant', 'Azralon', battlenet.UNITED_STATES]]
 
 with_members = True
+ignore_wowrprogress = False
 
 def get_boss(boss_nome):
   
@@ -111,7 +112,7 @@ colors = {'Death Knight':'#C41F3B',
 
  ## http://imgur.com/InLkJUj
 
-ignore_wowrprogress = True
+
 
 for processar_guilda in array_guildas:
   nome_guilda = processar_guilda[0]

@@ -492,10 +492,6 @@ class Equipment(Thing):
         self.average_item_level = data['averageItemLevel']
         self.average_item_level_equipped = data['averageItemLevelEquipped']
 
-        print ('mainhand', data.get('mainhand'))
-        print ('offhand', data.get('offhand'))
-        print ('onehand', data.get('onehand'))
-
         self.main_hand = EquippedItem(self._character.region, data['mainHand'], self._character.connection, slot='Main Hand') if data.get('mainHand') else None
         self.off_hand = EquippedItem(self._character.region, data['offHand'], self._character.connection, slot='Held In Off-hand' ) if data.get('offHand') else None
         self.ranged = EquippedItem(self._character.region, data['ranged'], self._character.connection, slot='Ranged Right') if data.get('ranged') else None
@@ -923,7 +919,7 @@ class EquippedItem(Thing):
         try:
             self.slot = slots[data['inventoryType']]
         except KeyError:
-            print ('data[\'inventoryType\']','not included')
+            #print ('data[\'inventoryType\']','not included')
             #print ('inventoryType not found, this comes from a Guild query')
             #full_item = self.connection.get_item(region, self.id)
             self.slot = slot
