@@ -49,6 +49,8 @@ def criarEquipamento(equipamento):
 
     #print (equipamento.__class__)
 
+
+    #Always faster to get info locally than from battle.net
     try:
       equip_criado = Equipamento.objects.get(identificador=identificador_equipamento)
       return equip_criado
