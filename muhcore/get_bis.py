@@ -19,17 +19,32 @@ import re
 from collections import Counter
 
 from battlenet import Connection, EquippedItem
-from muh_core_app.models import Personagem, Guilda, Equipamento, Historico, Bis
+from muh_core_app.models import Personagem, Guilda, Equipamento, Historico, Bis, Boss
 from django.utils import timezone
+from wowheadhelper import get_item_source
 
 
 
 with_members = True
 
+def get_boss(boss_nome):
+  
+  if boss_nome == None:
+    boss_nome = 'None'
+  
+  try:
+    boss_exists = Boss.objects.get(nome = boss_nome)
+  except Boss.DoesNotExist:
+    boss_exists = Boss.objects.create(nome = boss_nome)
+  return boss_exists
+
+
+
 def criarEquipamento(equipamento_id): 
   if (equipamento_id != None):
     try:
       equip_exists = Equipamento.objects.get(identificador=equipamento_id)
+      
       return equip_exists
     except Equipamento.DoesNotExist:
       print ('Criando Equipamento... ID:', equipamento_id)
@@ -38,15 +53,22 @@ def criarEquipamento(equipamento_id):
       bonus_id = str(equipamento.bonus).replace("[", "").replace("]", "").replace(" ", "").replace(",", "")
 
       #print str(equipamento.id) + str(bonus_id)
-      equip_criado, created = Equipamento.objects.get_or_create(identificador = int(str(equipamento.id) + str(bonus_id)),
-                                                        defaults={'nome': equipamento.name,
-                                                        'ilvl': int(equipamento.ilvl),
-                                                        'bonus' :  equipamento.bonus,
-                                                        'wowhead_identificador': equipamento.id,
-                                                        'slot': equipamento.slot,
-                                                        'origem': equipamento.context})
+      equip_criado = Equipamento.objects.create(identificador = equipamento_id)
+
+      equip_criado.nome = equipamento.name
+      equip_criado.ilvl = int(equipamento.ilvl)
+      equip_criado.bonus =  equipamento.bonus
+      equip_criado.wowhead_identificador = equipamento.id
+      equip_criado.slot = equipamento.slot
+      equip_criado.origem = equipamento.context
+
+      equip_criado.dropped_by = get_boss(get_item_source(equipamento_id))
+
+      print('dropped by ', equip_criado.dropped_by.nome)
+      print()
 
       equip_criado.save()
+
       return equip_criado
   else:
     return None

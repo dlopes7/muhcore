@@ -7,13 +7,16 @@ from django.utils import timezone
 
 # Create your models here.
 
-class Guilda(models.Model):
+class Boss(models.Model): 
     nome = models.CharField(max_length=200)
-    reino = models.CharField(max_length=200)
+
+class Guilda(models.Model):
+    nome = models.CharField(max_length=200, null=True, blank=True)
+    reino = models.CharField(max_length=200, null=True, blank=True)
     identificador = models.CharField(max_length=200)
-    num_membros = models.IntegerField()
-    wowprogress_id = models.CharField(max_length=200)
-    progresso = models.CharField(max_length=50)
+    num_membros = models.IntegerField(null=True, blank=True)
+    wowprogress_id = models.CharField(max_length=200, null=True, blank=True)
+    progresso = models.CharField(max_length=50, null=True, blank=True)
 
     def get_membros_lvl_100(self):
         return len(self.personagem_guilda.all())
@@ -39,6 +42,7 @@ class Equipamento(models.Model):
     origem = models.CharField(max_length=200, null=True, blank=True)
     identificador = models.CharField(max_length=300)
     wowhead_identificador = models.CharField(max_length=300, null=True, blank=True)
+    dropped_by = models.ForeignKey(Boss, related_name='equipamento_dropped_by', null=True, blank=True)
     
     def get_bonus(self):
         bonus = self.bonus.replace("[", "").replace("]", "").replace(" ", "").replace(",", ":")
@@ -112,6 +116,8 @@ class Bis(models.Model):
     classe = models.CharField(max_length=200, default='1')
     spec = models.CharField(max_length=200, default='1')
 
+    dropped_by = models.ForeignKey(Boss, related_name='bis_dropped_by', null=True, blank=True)
+
     head = models.ForeignKey(Equipamento, related_name='bis_head', null=True, blank=True)
     shoulder = models.ForeignKey(Equipamento, related_name='bis_shoulder', null=True, blank=True)
     neck = models.ForeignKey(Equipamento, related_name='bis_neck', null=True, blank=True)
@@ -180,5 +186,7 @@ class Bis(models.Model):
                 self.trinket2 = equipamento
 
         else:
-            print ('Item: ' + equipamento.nome + ', slot: ' + equipamento.slot + ' nao foi inserido na BIS!')
-            return 'Item: ' + equipamento.nome + ', slot: ' + equipamento.slot + ' nao foi inserido na BIS!'
+            print ('Item: ' + str(equipamento.nome) + ', slot: ' + str(equipamento.slot) + ' nao foi inserido na BIS!')
+            return 'Item: ' + str(equipamento.nome) + ', slot: ' + str(equipamento.slot) + ' nao foi inserido na BIS!'
+
+

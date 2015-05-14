@@ -18,8 +18,9 @@ import re
 from collections import Counter
 
 from battlenet import Connection, Character, Guild
-from muh_core_app.models import Personagem, Guilda, Equipamento, Historico
+from muh_core_app.models import Personagem, Guilda, Equipamento, Historico, Boss
 from django.utils import timezone
+from wowheadhelper import get_item_source
 
 #-------------------Guilda a ser scaneada -------
 #nome_guilda = 'Taunta Que Eu Aggrei'
@@ -38,6 +39,17 @@ array_guildas = [#['Paradox', 'Nemesis', battlenet.UNITED_STATES],
                  ['Defiant', 'Azralon', battlenet.UNITED_STATES]]
 
 with_members = True
+
+def get_boss(boss_nome):
+  
+  if boss_nome == None:
+    boss_nome = 'None'
+  
+  try:
+    boss_exists = Boss.objects.get(nome = boss_nome)
+  except Boss.DoesNotExist:
+    boss_exists = Boss.objects.create(nome = boss_nome)
+  return boss_exists
 
 def criarEquipamento(equipamento):
   if (equipamento != None):
@@ -71,6 +83,7 @@ def criarEquipamento(equipamento):
       equip_criado.wowhead_identificador = equipamento.id
       equip_criado.slot = slot
       equip_criado.origem = equipamento.context
+      equip_criado.dropped_by = get_boss(get_item_source(equipamento.id))
       equip_criado.save()
 
       return equip_criado
