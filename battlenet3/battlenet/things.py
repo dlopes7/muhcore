@@ -153,7 +153,7 @@ class Character(LazyThing):
 
     def _populate_data(self, data):
         self._data = data
-
+        #print(data)
 
         self.name = normalize(data['name'])
         self.level = data['level']
@@ -492,27 +492,27 @@ class Equipment(Thing):
         self.average_item_level = data['averageItemLevel']
         self.average_item_level_equipped = data['averageItemLevelEquipped']
 
-        self.main_hand = EquippedItem(self._character.region, data['mainHand'], self._character.connection) if data.get('mainHand') else None
-        self.off_hand = EquippedItem(self._character.region, data['offHand'], self._character.connection) if data.get('offHand') else None
-        self.ranged = EquippedItem(self._character.region, data['ranged'], self._character.connection) if data.get('ranged') else None
+        self.main_hand = EquippedItem(self._character.region, data['mainHand'], self._character.connection, slot='Main Hand') if data.get('mainHand') else None
+        self.off_hand = EquippedItem(self._character.region, data['offHand'], self._character.connection, slot='Held In Off-hand' ) if data.get('offHand') else None
+        self.ranged = EquippedItem(self._character.region, data['ranged'], self._character.connection, slot='Ranged Right') if data.get('ranged') else None
 
-        self.head = EquippedItem(self._character.region, data['head'], self._character.connection) if data.get('head') else None
-        self.neck = EquippedItem(self._character.region, data['neck'], self._character.connection) if data.get('neck') else None
-        self.shoulder = EquippedItem(self._character.region, data['shoulder'], self._character.connection) if data.get('shoulder') else None
-        self.back = EquippedItem(self._character.region, data['back'], self._character.connection) if data.get('back') else None
-        self.chest = EquippedItem(self._character.region, data['chest'], self._character.connection) if data.get('chest') else None
-        self.shirt = EquippedItem(self._character.region, data['shirt'], self._character.connection) if data.get('shirt') else None
-        self.tabard = EquippedItem(self._character.region, data['tabard'], self._character.connection) if data.get('tabard') else None
-        self.wrist = EquippedItem(self._character.region, data['wrist'], self._character.connection) if data.get('wrist') else None
+        self.head = EquippedItem(self._character.region, data['head'], self._character.connection, slot='Head') if data.get('head') else None
+        self.neck = EquippedItem(self._character.region, data['neck'], self._character.connection, slot='Neck') if data.get('neck') else None
+        self.shoulder = EquippedItem(self._character.region, data['shoulder'], self._character.connection, slot='Shoulder') if data.get('shoulder') else None
+        self.back = EquippedItem(self._character.region, data['back'], self._character.connection, slot='Back') if data.get('back') else None
+        self.chest = EquippedItem(self._character.region, data['chest'], self._character.connection, slot='Chest') if data.get('chest') else None
+        self.shirt = EquippedItem(self._character.region, data['shirt'], self._character.connection, slot='Shirt') if data.get('shirt') else None
+        self.tabard = EquippedItem(self._character.region, data['tabard'], self._character.connection, slot='Tabard') if data.get('tabard') else None
+        self.wrist = EquippedItem(self._character.region, data['wrist'], self._character.connection, slot='Wrist') if data.get('wrist') else None
 
-        self.hands = EquippedItem(self._character.region, data['hands'], self._character.connection) if data.get('hands') else None
-        self.waist = EquippedItem(self._character.region, data['waist'], self._character.connection) if data.get('waist') else None
-        self.legs = EquippedItem(self._character.region, data['legs'], self._character.connection) if data.get('legs') else None
-        self.feet = EquippedItem(self._character.region, data['feet'], self._character.connection) if data.get('feet') else None
-        self.finger1 = EquippedItem(self._character.region, data['finger1'], self._character.connection) if data.get('finger1') else None
-        self.finger2 = EquippedItem(self._character.region, data['finger2'], self._character.connection) if data.get('finger2') else None
-        self.trinket1 = EquippedItem(self._character.region, data['trinket1'], self._character.connection) if data.get('trinket1') else None
-        self.trinket2 = EquippedItem(self._character.region, data['trinket2'], self._character.connection) if data.get('trinket2') else None
+        self.hands = EquippedItem(self._character.region, data['hands'], self._character.connection, slot='Hands') if data.get('hands') else None
+        self.waist = EquippedItem(self._character.region, data['waist'], self._character.connection , slot='Waist') if data.get('waist') else None
+        self.legs = EquippedItem(self._character.region, data['legs'], self._character.connection, slot='Legs') if data.get('legs') else None
+        self.feet = EquippedItem(self._character.region, data['feet'], self._character.connection, slot='Feet') if data.get('feet') else None
+        self.finger1 = EquippedItem(self._character.region, data['finger1'], self._character.connection, slot='Finger') if data.get('finger1') else None
+        self.finger2 = EquippedItem(self._character.region, data['finger2'], self._character.connection, slot='Finger') if data.get('finger2') else None
+        self.trinket1 = EquippedItem(self._character.region, data['trinket1'], self._character.connection, slot='Trinket') if data.get('trinket1') else None
+        self.trinket2 = EquippedItem(self._character.region, data['trinket2'], self._character.connection, slot='Trinket') if data.get('trinket2') else None
 
     def __getitem__(self, item):
         try:
@@ -892,7 +892,7 @@ class Realm(Thing):
 
 
 class EquippedItem(Thing):
-    def __init__(self, region, data, connection=None):
+    def __init__(self, region, data, connection=None, slot=None):
         super(EquippedItem, self).__init__(data)
 
         slots = {0: 'None',1: 'Head',2: 'Neck',3: 'Shoulder',4: 'Shirt',5: 'Chest',
@@ -905,6 +905,8 @@ class EquippedItem(Thing):
         self._region = region
 
         self.connection = connection or make_connection()
+
+
 
         self.id = data['id']
         self.name = data['name']
@@ -920,9 +922,9 @@ class EquippedItem(Thing):
         try:
             self.slot = slots[data['inventoryType']]
         except KeyError:
-            print ('inventoryType not found, getting the full item from battlenet:', self.id, self.name)
-            full_item = self.connection.get_item(region, self.id)
-            self.slot = slots[full_item['inventoryType']]
+            #print ('inventoryType not found, this comes from a Guild query')
+            #full_item = self.connection.get_item(region, self.id)
+            self.slot = slot
         
 
         #self.reforge = data['tooltipParams'].get('reforge')

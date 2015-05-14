@@ -26,6 +26,7 @@ from django.utils import timezone
 #nome_realm = 'Azralon'
 #nome_battlegroup = battlenet.UNITED_STATES
 #------------------------------------------------
+region = battlenet.UNITED_STATES
 
 array_guildas = [#['Paradox', 'Nemesis', battlenet.UNITED_STATES],
                  #['Blood Fury', 'Azralon', battlenet.UNITED_STATES],
@@ -40,24 +41,37 @@ with_members = True
 
 def criarEquipamento(equipamento):
   if (equipamento != None):
+
+    
     bonus_id = str(equipamento.bonus).replace("[", "").replace("]", "").replace(" ", "").replace(",", "")
+    identificador_equipamento = int(str(equipamento.id) + str(bonus_id))
+    slot = equipamento.slot
 
-    #print str(equipamento.id) + str(bonus_id)
-    equip_criado, created = Equipamento.objects.get_or_create(identificador = int(str(equipamento.id) + str(bonus_id)),
-                                                        defaults={'nome': equipamento.name,
-                                                        'ilvl': int(equipamento.ilvl),
-                                                        'bonus' :  equipamento.bonus,
-                                                        'wowhead_identificador': equipamento.id,
-                                                        'slot': equipamento.slot,
-                                                        'origem': equipamento.context})
+    #print (equipamento.__class__)
 
-    equip_criado.save()
-      #print equip_criado.origem 
-    #print equip_criado.wowhead_identificador, equipamento.id
-      #print equip_criado.get_bonus()
-    return equip_criado
-  else:
-    return None
+    try:
+      equip_criado = Equipamento.objects.get(identificador=identificador_equipamento)
+      return equip_criado
+
+    except Equipamento.DoesNotExist:
+      if slot == None:
+        try:
+          slot = Equipamento.objects.get(identificador=equipamento.id).slot
+        except Equipamento.DoesNotExist:
+          print ('No slot found, getting item from battle.net')
+          equipamento.slot = connection.get_item(region, equipamento.id)['inventoryType']
+
+      equip_criado = Equipamento.objects.create(identificador = identificador_equipamento)
+
+      equip_criado.nome = equipamento.name
+      equip_criado.ilvl = int(equipamento.ilvl)
+      equip_criado.bonus =  equipamento.bonus
+      equip_criado.wowhead_identificador = equipamento.id
+      equip_criado.slot = slot
+      equip_criado.origem = equipamento.context
+      equip_criado.save()
+
+      return equip_criado
 
 
 django.setup()
@@ -82,6 +96,7 @@ colors = {'Death Knight':'#C41F3B',
 
  ## http://imgur.com/InLkJUj
 
+ignore_wowrprogress = True
 
 for processar_guilda in array_guildas:
   nome_guilda = processar_guilda[0]
@@ -89,40 +104,41 @@ for processar_guilda in array_guildas:
   nome_battlegroup = processar_guilda[2]
 
   print("Guilda: " + nome_guilda + ", Realm: " + nome_realm + " BG: " + str(nome_battlegroup))
+  if not ignore_wowrprogress:
+    print ("Conectando ao WoWProgress")
+    url_wowprogress = "http://www.wowprogress.com/guild/"+ nome_battlegroup +"/"+ nome_realm.replace(' ', '-').replace('\'', '-') + "/" + nome_guilda
+    print (url_wowprogress)
+    pagina = urllib.request.urlopen(url_wowprogress)
+    print ("Conectado!")
 
-  print ("Conectando ao WoWProgress")
-  url_wowprogress = "http://www.wowprogress.com/guild/"+ nome_battlegroup +"/"+ nome_realm.replace(' ', '-').replace('\'', '-') + "/" + nome_guilda
-  print (url_wowprogress)
-  pagina = urllib.request.urlopen(url_wowprogress)
-  print ("Conectado!")
+    conteudo = pagina.read().decode("utf-8")
+    id_wowprogress = str(re.search('/guild_img/(.*?)"',conteudo).group(1))#.replace('\'', '')[1:]
+    url_wowprogress_icon = "http://www.wowprogress.com/guild_img/" + id_wowprogress + "/out/type.site"
 
-  conteudo = pagina.read().decode("utf-8")
-  id_wowprogress = str(re.search('/guild_img/(.*?)"',conteudo).group(1))#.replace('\'', '')[1:]
-  url_wowprogress_icon = "http://www.wowprogress.com/guild_img/" + id_wowprogress + "/out/type.site"
-
-  # class="innerLink ratingProgress" id="gk346_1034420"><b>6/7 (M)</b>  9/10 (H)</span>
-  progresso = str(re.search('ratingProgress.*?<b>(.*?)</span>',conteudo).group(1))
-  progresso = progresso.replace("</b>", "").replace("<b>", "- ")#.replace('\'', '')[1:]
-  print ("Progresso", progresso)
+    # class="innerLink ratingProgress" id="gk346_1034420"><b>6/7 (M)</b>  9/10 (H)</span>
+    progresso = str(re.search('ratingProgress.*?<b>(.*?)</span>',conteudo).group(1))
+    progresso = progresso.replace("</b>", "").replace("<b>", "- ")#.replace('\'', '')[1:]
+    print ("Progresso", progresso)
 
 
-  urllib.request.urlretrieve(url_wowprogress_icon, 'muh_core_app/static/img/wowprogress/' + id_wowprogress+'.jpg')
+    urllib.request.urlretrieve(url_wowprogress_icon, 'muh_core_app/static/img/wowprogress/' + id_wowprogress+'.jpg')
 
   logging.debug("Conectando a battlenet")
   print ("Conectando a battlenet...")
   guild = connection.get_guild(nome_battlegroup, nome_realm, nome_guilda, fields=[Guild.MEMBERS])
   print ("Conectado!")
-  print(guild)
+  #print(guild)
+  id_guilda = str(guild.name) + "@" + str(guild.realm)
 
+  try:
+    guilda = Guilda.objects.get(identificador = id_guilda)
+  except Guilda.DoesNotExist:
+    guilda = Guilda.objects.create(identificador = id_guilda,
+                                                nome = str(guild.name),
+                                                reino = str(guild.realm))
 
-  guilda, created = Guilda.objects.get_or_create(nome = str(guild.name),
-                                                 reino = str(guild.realm),
-                                                 identificador = str(guild.name) + "@" + str(guild.realm),
-                                                 defaults = {'num_membros': len(guild.members),
-                                                  'wowprogress_id' : id_wowprogress,
-                                                  'progresso' : progresso}) 
-
-  if not created:
+  if not ignore_wowrprogress:
+    guilda.num_membros = len(guild.members)
     guilda.wowprogress_id = id_wowprogress
     guilda.progresso = progresso
 
@@ -140,7 +156,8 @@ for processar_guilda in array_guildas:
     if member['character'].level == 100 and member['rank'] <= 3:
       nome_personagem = str(member['character'].name)
 
-      print (nome_personagem,)
+      print()
+      print (nome_personagem)
 
       try: 
         membro_all = connection.get_character(nome_battlegroup, nome_realm, nome_personagem, fields=[Character.ITEMS, Character.TALENTS])
@@ -157,7 +174,7 @@ for processar_guilda in array_guildas:
                                         'avatar' : membro_all.get_thumbnail_url(),
                                         'guilda' : guilda,
                                         'head' : criarEquipamento(membro_all.equipment.head),
-                                        'shoulder' : criarEquipamento(membro_all.equipment.shoulder,),
+                                        'shoulder' : criarEquipamento(membro_all.equipment.shoulder),
                                         'neck' : criarEquipamento(membro_all.equipment.shoulder),
                                         'back' : criarEquipamento(membro_all.equipment.back),
                                         'chest': criarEquipamento(membro_all.equipment.chest),

@@ -12,6 +12,7 @@ battlenet/utils.py
 battlenet.egg-info/PKG-INFO
 battlenet.egg-info/SOURCES.txt
 battlenet.egg-info/dependency_links.txt
+battlenet.egg-info/pbr.json
 battlenet.egg-info/top_level.txt
 tests/__init__.py
 tests/test_character.py

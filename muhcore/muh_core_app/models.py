@@ -32,13 +32,13 @@ class Guilda(models.Model):
 
 class Equipamento(models.Model):
 
-    nome = models.CharField(max_length=200)
-    slot = models.CharField(max_length=200)
-    ilvl = models.IntegerField()
-    bonus = models.CharField(max_length=200)
-    origem = models.CharField(max_length=200)
+    nome = models.CharField(max_length=200, null=True, blank=True)
+    slot = models.CharField(max_length=200, null=True, blank=True)
+    ilvl = models.IntegerField(null=True, blank=True)
+    bonus = models.CharField(max_length=200, null=True, blank=True)
+    origem = models.CharField(max_length=200, null=True, blank=True)
     identificador = models.CharField(max_length=300)
-    wowhead_identificador = models.CharField(max_length=300)
+    wowhead_identificador = models.CharField(max_length=300, null=True, blank=True)
     
     def get_bonus(self):
         bonus = self.bonus.replace("[", "").replace("]", "").replace(" ", "").replace(",", ":")
@@ -134,7 +134,7 @@ class Bis(models.Model):
         if slot == 'One-Hand':
             self.main_hand = equipamento
 
-        elif slot == 'Held In Off-hand':
+        elif slot == 'Held In Off-hand' or slot == 'Shield':
             self.off_hand = equipamento
 
         elif slot == 'Head':
@@ -147,9 +147,9 @@ class Bis(models.Model):
             self.shoulder = equipamento
 
         elif slot == 'Cloak':
-            self.cloak = equipamento
+            self.back = equipamento
 
-        elif slot == 'Robe':
+        elif slot == 'Robe' or slot == 'Chest':
             self.chest = equipamento
 
         elif slot == 'Wrist':
@@ -180,4 +180,5 @@ class Bis(models.Model):
                 self.trinket2 = equipamento
 
         else:
+            print ('Item: ' + equipamento.nome + ', slot: ' + equipamento.slot + ' nao foi inserido na BIS!')
             return 'Item: ' + equipamento.nome + ', slot: ' + equipamento.slot + ' nao foi inserido na BIS!'

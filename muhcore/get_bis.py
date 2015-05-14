@@ -70,9 +70,6 @@ def criarBis(classe, spec, lista_bis):
       bis_atual.add_equipment(equipamento)
     bis_atual.save()
 
-      
-
-
 django.setup()
 
 logging.basicConfig(filename='../../processo.log',level=logging.DEBUG, format='%(asctime)s %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
