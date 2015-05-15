@@ -1,5 +1,6 @@
 from django.shortcuts import render, render_to_response
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from collections import defaultdict
 import json
 
 # Create your views here.
@@ -54,6 +55,28 @@ def bis_list(request):
 		lista_bis = paginator.page(paginator.num_pages)
 
 	return render_to_response('muh_core_app/bis.html', {"lista_bis": lista_bis})
+
+
+def boss(request, boss_id, guilda_id):
+
+	#Get all equipment that drops from boss 'biss_id'
+	items_from_boss = Equipamento.objects.filter(dropped_by=Boss.objects.get(pk = boss_id))
+	lista_items_from_boss_id = list(item.wowhead_identificador for item in items_from_boss)
+
+	guilda = Guilda.objects.get(pk=guilda_id)
+	membros = guilda.personagem_guilda.all()
+
+	membros_needed = defaultdict(list)
+
+	for membro in membros:
+		bis_needed = membro.get_bis_missing()
+		for item in bis_needed:
+			if item.wowhead_identificador in lista_items_from_boss_id:
+				membros_needed[membro] = item
+
+
+
+
 
 def bosses(request):
 

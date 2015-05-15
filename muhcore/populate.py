@@ -59,6 +59,7 @@ def criarEquipamento(equipamento):
     bonus_id = str(equipamento.bonus).replace("[", "").replace("]", "").replace(" ", "").replace(",", "")
     identificador_equipamento = int(str(equipamento.id) + str(bonus_id))
     slot = equipamento.slot
+    dropped_by_boss = None
 
     #print (equipamento.__class__)
 
@@ -72,6 +73,7 @@ def criarEquipamento(equipamento):
       if slot == None:
         try:
           slot = Equipamento.objects.get(identificador=equipamento.id).slot
+          dropped_by_boss = Equipamento.objects.get(identificador=equipamento.id).dropped_by
         except Equipamento.DoesNotExist:
           print ('No slot found, getting item from battle.net')
           equipamento.slot = connection.get_item(region, equipamento.id)['inventoryType']
@@ -84,7 +86,7 @@ def criarEquipamento(equipamento):
       equip_criado.wowhead_identificador = equipamento.id
       equip_criado.slot = slot
       equip_criado.origem = equipamento.context
-      equip_criado.dropped_by = get_boss(get_item_source(equipamento.id))
+      equip_criado.dropped_by = dropped_by_boss
       equip_criado.save()
 
       return equip_criado
