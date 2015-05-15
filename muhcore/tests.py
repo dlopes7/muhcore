@@ -12,15 +12,15 @@ from collections import defaultdict
 
 django.setup()
 
-test_bis = False
-teste_boss = True
+test_bis = True
+teste_boss = False
 
 
 
 
 classes = {#'Death Knight':{'Blood', 'Unholy', 'Frost'}}
           #'Druid':{'Blood', 'Unholy', 'Frost'},
-          #'Hunter':{'Blood', 'Unholy', 'Frost'},
+          'Hunter':['Beast Mastery'],
           #'Mage':{'Blood', 'Unholy', 'Frost'},
           'Monk':['Windwalker', 'Mistweaver'],
           'Paladin':['Holy'],
@@ -65,12 +65,12 @@ if test_bis:
       for jogador in jogadores:
         print ('Bis que', jogador.nome, 'já tem:', '(' + classe + ' - ' + spec + ')')
         for bis in jogador.get_bis_equipped():
-          print (bis)
+          print (bis.dropped_by, ' - ', bis)
 
         print()
         print ('Bis que', jogador.nome, 'não tem:', '(' + classe + ' - ' + spec + ')')
         for bis in jogador.get_bis_missing():
-          print (bis)
+          print (bis.dropped_by, ' - ',bis)
         print()
 
 if teste_boss:

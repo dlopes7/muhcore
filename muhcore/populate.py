@@ -61,7 +61,7 @@ def criarEquipamento(equipamento):
     slot = equipamento.slot
     dropped_by_boss = None
 
-    #print (equipamento.__class__)
+    print (equipamento.name)
 
 
     #Always faster to get info locally than from battle.net
@@ -74,6 +74,7 @@ def criarEquipamento(equipamento):
         try:
           slot = Equipamento.objects.get(identificador=equipamento.id).slot
           dropped_by_boss = Equipamento.objects.get(identificador=equipamento.id).dropped_by
+          print (dropped_by_boss)
         except Equipamento.DoesNotExist:
           print ('No slot found, getting item from battle.net')
           equipamento.slot = connection.get_item(region, equipamento.id)['inventoryType']

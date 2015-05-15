@@ -11,6 +11,9 @@ class Boss(models.Model):
     nome = models.CharField(max_length=200)
     identificador = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.nome
+
 class Guilda(models.Model):
     nome = models.CharField(max_length=200, null=True, blank=True)
     reino = models.CharField(max_length=200, null=True, blank=True)
@@ -129,16 +132,16 @@ class Personagem(models.Model):
         meus_items =  filter(None, self.get_all_items())
         meu_bis =filter(None,  bis.get_all_items())
 
-        lista_bis_ids = list(bis.identificador for bis in meu_bis)
-        #print (lista_bis_ids)
+        lista_meus_items_id = list(meu_item.wowhead_identificador for meu_item in meus_items)
 
         equipped = []
 
-        for meu_item in meus_items:
-            if meu_item.wowhead_identificador in (lista_bis_ids):
-                equipped.append(meu_item)
+        for bis in meu_bis:
+            if bis.identificador in (lista_meus_items_id):
+                equipped.append(bis)
 
         return equipped
+
 
     def get_bis_missing(self):
         bis = Bis.objects.get(classe = self.classe, spec = self.spec)
@@ -146,7 +149,6 @@ class Personagem(models.Model):
         meu_bis =filter(None,  bis.get_all_items())
 
         lista_meus_items_id = list(meu_item.wowhead_identificador for meu_item in meus_items)
-        #print (lista_bis_ids)
 
         muissing = []
 
@@ -208,7 +210,7 @@ class Bis(models.Model):
 
     def add_equipment(self, equipamento):
         slot = equipamento.slot
-        if slot == 'One-Hand' or slot == 'Two-Hand':
+        if slot == 'One-Hand' or slot == 'Two-Hand' or slot == 'Ranged Right':
             self.main_hand = equipamento
 
         elif slot == 'Held In Off-hand' or slot == 'Shield':

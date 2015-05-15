@@ -134,7 +134,7 @@ classes = {#'Death Knight':{'Blood', 'Unholy', 'Frost'}}
           'Paladin':['Holy'],
           'Priest':['Discipline'],
           #'Rogue':{'Blood', 'Unholy', 'Frost'},
-          'Shaman':['Enhancement', 'Elemental']}
+          'Shaman':['Enhancement', 'Elemental', 'Restoration']}
           #'Warlock':{'Blood', 'Unholy', 'Frost'},
           #'Warrior':{'Blood', 'Unholy', 'Frost'}
 
@@ -158,7 +158,11 @@ bis_list = {'Shaman - Elemental'  : [113904, 113960, 115579, 113872, 115576, 120
 
 
             'Hunter - Beast Mastery':[113966, 115545, 113892, 115547, 113929, 115548, 113968, 115549,
-                                      113955, 113944, 113954, 113877, 118307, 113985, 118114]}
+                                      113955, 113944, 113954, 113877, 118307, 113985, 118114],
+
+            'Shaman - Restoration': [113869, 115579, 113872, 113899, 113945, 115577, 119334, 115578,
+                                       113955, 115575, 113954 ,118309, 113975, 113986, 113948]}
+
 
 
 
