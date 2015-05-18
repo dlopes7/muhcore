@@ -49,7 +49,9 @@ class Equipamento(models.Model):
     dropped_by = models.ForeignKey(Boss, related_name='equipamento_dropped_by', null=True, blank=True)
     
     def get_bonus(self):
-        bonus = self.bonus.replace("[", "").replace("]", "").replace(" ", "").replace(",", ":")
+        bonus = ''
+        if self.bonus:
+            bonus = self.bonus.replace("[", "").replace("]", "").replace(" ", "").replace(",", ":")
         return str(bonus)
 
     def __str__(self):

@@ -29,14 +29,26 @@ from wowheadhelper import get_item_source
 #------------------------------------------------
 region = battlenet.UNITED_STATES
 
-array_guildas = [#['Paradox', 'Nemesis', battlenet.UNITED_STATES],
-                 #['Blood Fury', 'Azralon', battlenet.UNITED_STATES],
-                 #['Rise Above', 'Azralon', battlenet.UNITED_STATES],
-                 #['WICKED SICK', 'Azralon', battlenet.UNITED_STATES],
-                 #['Paragon', 'Lightning\'s Blade', battlenet.EUROPE],
-                 #['Method', 'Twisting Nether', battlenet.EUROPE],
-                 #['Avalon', 'Nemesis', battlenet.UNITED_STATES],
-                 ['Defiant', 'Azralon', battlenet.UNITED_STATES]]
+array_guildas = [#['Midwinter', 'Sargeras', battlenet.UNITED_STATES],
+        #['Avast', 'Jubei\'Thos', battlenet.UNITED_STATES],
+        #['Ascension','Barthilas', battlenet.UNITED_STATES],
+        #['Duality', 'Zul\'jin', battlenet.UNITED_STATES],
+        #['Huge in Japan', 'Kil\'Jaeden', battlenet.UNITED_STATES],
+        #['Reckoning', 'Mannoroth', battlenet.UNITED_STATES],
+        #['Honestly', 'Frostmourne', battlenet.UNITED_STATES],
+        #['Limit', 'Illidan', battlenet.UNITED_STATES],
+        #['Razzia', 'Arthas', battlenet.UNITED_STATES],
+        #['Smitus and Friends', 'Sargeras', battlenet.UNITED_STATES],
+        #['vodka', 'Stormrage', battlenet.UNITED_STATES],
+        #['WHATEVER WERE AWESOME', 'Magtheridon', battlenet.UNITED_STATES],
+        #['Encore', 'Illidan', battlenet.UNITED_STATES],
+        #['Promethean', 'Stormreaver', battlenet.UNITED_STATES],
+        #['Raiding Rainbows', 'Illidan', battlenet.UNITED_STATES],
+        #['Vigil', 'Mal\'Ganis', battlenet.UNITED_STATES],
+        #['Shake Miracle', 'Illidan', battlenet.UNITED_STATES],
+        #['KLG Rising', 'Ragnaros', battlenet.UNITED_STATES],
+        #['Strawberry Puppy Kisses', 'Area 52', battlenet.UNITED_STATES],
+        ['Defiant', 'Azralon', battlenet.UNITED_STATES]]
 
 with_members = True
 ignore_wowrprogress = False
