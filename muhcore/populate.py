@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
 
-import os, traceback
+import os
+import traceback
 
 os.environ['PYTHONPATH'] = '/home/david/Documents/projeto/muhcore'
 os.environ['DJANGO_SETTINGS_MODULE'] = 'muhcore.settings'
 
 
-import codecs
 import urllib.request
-import sys
 import battlenet
-import operator
 import logging
 import django
 import re
